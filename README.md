@@ -1,4 +1,4 @@
-# BS4 Helper
+# BS4 Helper v1.0.0
 
 ## jQuery Initialization
 
