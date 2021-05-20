@@ -1,3 +1,5 @@
-# bs4-helper
+# BS4 Helper
 
-This repository adds additional styling properties to BS4 classes like .display-1,2,3,4.
+## Additional Styling
+
+This repository adds additional styling properties to BS4 classes like `.display-1,2,3,4.`
