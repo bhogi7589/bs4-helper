@@ -1,5 +1,7 @@
 # BS4 Helper v1.0.0
 
+**Warning! This framework is an extension to Bootstrap 4, so, without BS4, this framework may not work as expected!**
+
 ## jQuery Initialization
 
 Without BS4 Helper you have to initialize elements like tooltips yourself with `jQuery`. But, BS4 Helper does all that initialization for you. Just import it by following this [link](https://bhogi7589.github.io/bs4-helper)!
