@@ -16,4 +16,4 @@ BS4 Helper also adds additional styling properties to Bootstrap 4 classes like `
 
 BS4 Helper also adds new classes to Bootstrap 4 like `.heading`, `.heading-large`, `.heading-medium`, `heading-small`, `.heading-red`, `heading-orange` etc.
 
-**Warning! This framework is an extension to Bootstrap 4, so, without BS4, this framework may not work as expected!**
+#### Warning! This framework is an extension to Bootstrap 4, so, without BS4, this framework may not work as expected!
