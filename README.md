@@ -14,4 +14,4 @@ BS4 Helper also adds additional styling properties to Bootstrap 4 classes like `
 
 ## New Classes
 
-BS4 Helper also adds new classes to Bootstrap 4 like `.heading`, `.heading-red`, `heading-orange` etc.
+BS4 Helper also adds new classes to Bootstrap 4 like `.heading`, `.heading-large`, `.heading-medium`, `heading-small`, `.heading-red`, `heading-orange` etc.
