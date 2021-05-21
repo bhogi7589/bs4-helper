@@ -6,7 +6,7 @@ Without BS4 Helper you have to initialize elements like tooltips yourself with `
 
 ### jQuery Additions
 
-BS4 Helper also adds and initializes components like Growing Progress Bars. Just add `data-progress="grow"` and `data-max-width=[width relative to parent of your choice]`(optional) to a `<div>` element with `class="progress-bar"`. If you want to set transition, add `data-transition=[milliseconds]` too. Add `data-animation="scroll"` to trigger the animation when you scroll past the progress bar.
+BS4 Helper also adds and initializes components like Growing Progress Bars. Just add `data-progress="grow"` and `data-max-width=[width relative to parent of your choice]`(optional) to a `<div>` element with `class="progress-bar"`. If you want to set transition, add `data-transition=[milliseconds]` too.
 
 ## Additional Styling
 
