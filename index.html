@@ -1,0 +1,122 @@
+<!doctype html>
+<html id="home">
+    <head>
+        <title>BS4 Helper</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bs4-helper.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="bs4-helper.js"></script>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+            <a class="navbar-brand" href="#home">Home</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navigation">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#howtouse" class="nav-link">How to use</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Preview</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#progress">BS4 Helper Growing Progress Bars</a>
+                            <a class="dropdown-item" href="#headings">BS4 Helper Headings</a>
+                            <a class="dropdown-item" href="#highvsnorm">Highlighted Text vs. Normal Text</a>
+                            <a class="dropdown-item" href="#tltip">BS4 Helper Tooltip</a>
+                            <a class="dropdown-item" href="#textsizecolor">BS4 Helper Text Sizes and Colors</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container bg-rainbow">
+            <div class="section" id="howtouse">
+                <div class="jumbotron">
+                    <h1 class="heading heading-medium">Use BS4 Helper</h1>
+                    <h1 class="text-left text-underline">Download BS4 helper:</h1>
+                    <h2 class="text-left">Instructions:</h2>
+                    <p class="text-left">In order to download, go to the following <a class="link" href="https://github.com/bhogi7589/bs4-helper.git" target="_blank">link</a> and click on 'Code'. In the dropdown menu that just shows up, click on 'Download ZIP'.</p>
+                    <h1 class="text-left text-underline">Using CDN:</h1>
+                    <h2 class="text-left">Instructions:</h2>
+                    <p class="text-left">If you don't want to download and host BS4 Helper yourself, you can include it from a CDN (Content Delivery Network).</p><br>
+                    <h3 class="text-left">Copy the code below and paste it in your <code>&lt;head&gt;</code> tag:</h3>
+                    <code class="text-left">&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"&gt;<br>
+                    &lt;link rel="stylesheet" href="https://bhogi7589.github.io/bs4-helper/bs4-helper.css"&gt;<br>
+                    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;<br>
+                    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"&gt;&lt;/script&gt;<br>
+                    &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"&gt;&lt;/script&gt;<br>
+                    &lt;script src="https://bhogi7589.github.io/bs4-helper/bs4-helper.js"&gt;&lt;/script&gt;<br>
+                    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;&lt;/script&gt;</code>
+                    <br><br>
+                    <h4 class="text-left">For more colors, use the colors style sheet of BS4 Helper:</h4>
+                    <code class="text-left">&lt;link rel="stylesheet" href="https://bhogi7589.github.io/bs4-helper/bs4-helper-colors.css"&gt;</code>
+                    <div class="alert alert-warning text-left">
+                        <strong>Warning!</strong> BS4 Helper may not work as expected without importing Bootstrap 4!
+                    </div>
+                </div>
+            </div>
+            <h1 class="heading heading-large">BS4 Helper Preview</h1>
+            <div class="section" id="progress">
+                <h1 class="heading heading-medium">BS4 Helper Growing Progress Bars</h1>
+                <h1 class="heading">Normal Progress Bar</h1>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 50%"></div>
+                </div>
+                <h1 class="heading">Growing Progress Bar</h1>
+                <div class="progress">
+                    <div class="progress-bar bg-success" data-progress="grow" data-transition=10 data-max-width=95 show-percentage="true"></div>
+                </div>
+            </div>
+            <div class="section" id="headings">
+                <h1 class="heading heading-medium">BS4 Helper Headings</h1>
+                <h1 class="display-1">Display-1</h1>
+                <h1>Heading-1</h1>
+                <h2 class="display-2">Display-2</h2>
+                <h2>Heading-2</h2>
+                <h3 class="display-3">Display-3</h3>
+                <h3>Heading-3</h3>
+                <h4 class="display-4">Display-4</h4>
+                <h4>Heading-4</h4>
+                <h2 class="heading heading-small">Colored Headings</h2>
+                <h1 class="heading heading-red">Red Heading</h1>
+                <h1 class="heading heading-orange">Orange Heading</h1>
+                <h1 class="heading heading-yellow">Yellow Heading</h1>
+                <h1 class="heading heading-green">Green Heading</h1>
+                <h1 class="heading heading-cyan">Cyan Heading</h1>
+                <h1 class="heading heading-blue bg-red">Blue Heading</h1>
+                <h1 class="heading heading-indigo bg-red">Indigo Heading</h1>
+                <h1 class="heading heading-violet bg-red">Violet/Purple Heading</h1>
+            </div>
+            <div class="section" id="highvsnorm">
+                <h1 class="heading heading-medium">Highlighted Text vs. Normal text (<code>&lt;mark&gt;</code> element)</h1>
+                <p><mark>Highlighted Text</mark> Normal Text</p>
+            </div>
+            <div class="section" id="tltip">
+                <h1 class="heading heading-medium">BS4 Helper Tooltip</h1>
+                <h4 data-toggle="tooltip" data-placement="top" title="I am a tooltip!">Hover over me</h4>
+            </div>
+            <div class="section" id="textsizecolor">
+                <h1 class="heading heading-medium">BS4 Helper Text Sizes and Colors</h1>
+                <p class="text-large">Large Text</p>
+                <p class="text-medium">Medium Text</p>
+                <p class="text-small">Small Text</p>
+                <p class="text-xs">Extra Small Text</p>
+                <p class="text-red">Red Text</p>
+                <p class="text-orange">Orange Text</p>
+                <p class="text-yellow">Yellow Text</p>
+                <p class="text-green">Green Text</p>
+                <p class="text-cyan">Cyan Text</p>
+                <p class="text-blue">Blue Text</p>
+                <p class="text-indigo">Indigo Text</p>
+                <p class="text-violet">Violet Text</p>
+                <p class="text-comment">These sizes and colors can be combined as follows:</p>
+                <p class="text-large text-red">Large Red Text</p>
+                <p class="text-medium text-yellow">Medium Yellow Text</p>
+                <p class="text-small text-green">Small Green Text</p>
+                <p class="text-xs text-blue">Extra Small Blue Text</p>
+                <p class="text-comment">...and other possible combinations.</p>
+            </div>
+        </div>
+    </body>
+</html>
