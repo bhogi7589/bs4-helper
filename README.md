@@ -10,6 +10,10 @@ BS4 Helper also adds and initializes components like Growing Progress Bars. Just
 
 **Note: BS4 Helper only allows *one* growing progress bar per page.**
 
+## Rotated Elements
+
+BS4 Helper also adds classes for rotating elements by different angles. Just include `class="rotate-[measure of angle]"`.
+
 ## Additional Styling
 
 BS4 Helper also adds additional styling properties to Bootstrap 4 classes like `.display-1,2,3,4`.
