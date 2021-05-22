@@ -31,7 +31,7 @@ button {cursor: pointer} .btn {box-shadow: 2px 3px 2px #aaa!important}
 .navbar-brand {font-weight: 900!important; font-size: 35px!important} .navbar {font-weight: 700; transition: opacity 0.4s; opacity: 0.85; font-size: 25px; box-shadow: 0 3px 2px #777} .navbar-toggler {outline: none!important; border: none!important; font-size: 30px} .nav-item, .navbar-toggler, .navbar-brand {transition: transform 0.4s; opacity: 1; padding-left: 20px!important; padding-right: 20px!important} .navbar-brand:hover {transform: scale(1.15)} .navbar-toggler:hover {transform: scale(1.15)} .nav-item:hover {transform: scale(1.15)} .navbar:hover {opacity: 1}
 
 /*Round Elements*/
-.round {border-radius:10rem!important}
+.pill {border-radius:10rem!important}
 
 /*Progress Bars*/
 .progress-bar {border-radius: 10rem!important; -webkit-transition: none !important; transition: none !important} .progress {border-radius: 10rem!important}
@@ -44,3 +44,6 @@ button {cursor: pointer} .btn {box-shadow: 2px 3px 2px #aaa!important}
 
 /*Active or Disabled state*/
 .disabled {pointer-events: none!important}
+
+/*Inputs*/
+.input-group-icon {border-radius: 10px!important; display: flex!important; height: 30px!important} .input-group-icon-pill {border-radius: 10rem!important; display: flex!important; height: 30px!important} .input {border-radius: 10px; font-size: 25px; height: 100%} .input-group-icon .input {width: 80%!important; border-radius: 10px 0 0 10px!important} .input-group-icon-pill .input {width: 80%!important; border-radius: 10rem 0 0 10rem!important} .input-toggle-btn {background-color: #000!important; color: #fff!important} .input-group-icon-pill .input-toggle-btn {width: 20%!important; border-radius: 0 10rem 10rem 0!important} .input-group-icon .input-toggle-btn {width: 20%!important; border-radius: 0 10px 10px 0!important}

@@ -45,7 +45,7 @@ $(".custom-file-input").on("change", function() {
       var element, max, str, transition, percentage;
       for (var i = 0; i < elements.length; i++) {
           element = elements[i];
-          if (element.getAttribute("data-animation") !== "scroll"){
+          if (element.getAttribute("data-showanimation") !== "false"){
               if (element.getAttribute("data-progress") === "grow") {
                   attribute.push(element);
                   max = element.getAttribute("data-max-width");
@@ -101,8 +101,4 @@ function move(element, max, trans, percent) {
       }
     }
   }
-}
-
-function showalert(){
-    window.alert("You clicked the button!");
 }
