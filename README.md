@@ -1,3 +1,7 @@
+# BS4 Helper v1.0.1
+
+Added `.float-left` and `.float-right` classes. You can create beautiful looking inputs using `.input-group-icon`, `.input-group-icon-pill`, `.input`, and `input-toggle-btn` classes. Also added a curved scrollbar which is more good-looking than the default one.
+
 # BS4 Helper v1.0.0
 
 ## jQuery Initialization
