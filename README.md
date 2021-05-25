@@ -1,6 +1,18 @@
+# BS4 Helper v1.0.2
+
+Added Shrinking Progress Bars and Timer Bars.
+
+Way to use:
+
+Shrinking Progress Bars:
+Replace `data-progress="grow"` with `data-progress="shrink"` and (if you have added this) `data-max-width` to `data-min-width`.
+
+Timer Bars:
+Replace `data-progress="grow"` with `data-progress="timer"` and add `data-time=[time in seconds]` and `toggle-btn=[toggler button id]`. If you want to show the amount of time left in a label, add `show-label=[label id]`. Add the `.timer-label` class to the timer label.
+
 # BS4 Helper v1.0.1
 
-Added `.float-left` and `.float-right` classes. You can create beautiful looking inputs using `.input-group-icon`, `.input-group-icon-pill`, `.input`, and `input-toggle-btn` classes. Also added a curved scrollbar which is more good-looking than the default one.
+Added `.float-left` and `.float-right` classes. You can create beautiful looking inputs using `.input-group-icon`, `.input-group-icon-pill`, `.input`, and `input-toggle-btn` classes.
 
 # BS4 Helper v1.0.0
 
