@@ -77,7 +77,7 @@ $(".custom-file-input").on("change", function() {
           max = maxwidth[n];
           transition = transitions[n];
           percentage = percentages[n];
-          element.onload = move(element, max, transition, percentage);
+          move(element, max, transition, percentage);
       }
   }, false);
 })();
@@ -92,6 +92,7 @@ function move(element, max, trans, percent) {
       if (width >= max) {
         clearInterval(id);
         i = 0;
+        width = 0;
       } else {
         width++;
         element.style.width = width + "%";
@@ -100,5 +101,143 @@ function move(element, max, trans, percent) {
         }
       }
     }
+  }
+}
+
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+      var elements = document.getElementsByClassName("progress-bar"),
+          attribute = [],
+          maxwidth = [],
+          transitions = [],
+          percentages = [],
+          i = 0;
+      var element, max, str, transition, percentage;
+      for (var i = 0; i < elements.length; i++) {
+          element = elements[i];
+          if (element.getAttribute("data-showanimation") !== "false"){
+              if (element.getAttribute("data-progress") === "shrink") {
+                  attribute.push(element);
+                  max = element.getAttribute("data-min-width");
+                  if (max === "" || max == null) {
+                      maxwidth.push(0);
+                  }
+                  else {
+                      maxwidth.push(max);
+                  }
+                  transition = element.getAttribute("data-transition");
+                  if (transition === "" || transition == null) {
+                      transitions.push(30);
+                  }
+                  else {
+                      transitions.push(transition);
+                  }
+                  percentage = element.getAttribute("show-percentage");
+                  if (percentage === "" || percentage == null) {
+                      percentages.push("false");
+                  }
+                  else {
+                      percentages.push(percentage);
+                  }
+              }
+          }
+      }
+      for (var n = 0; n < attribute.length; n++) {
+          element = attribute[n];
+          max = maxwidth[n];
+          transition = transitions[n];
+          percentage = percentages[n];
+          shrink(element, max, transition, percentage);
+      }
+  }, false);
+})();
+
+function shrink(element, min, trans, percent) {
+    var width = 100;
+    var id = setInterval(frame, trans);
+    function frame() {
+        if (width <= min) {
+            clearInterval(id);
+            width = 0;
+        }
+        else {
+            width--;
+            element.style.width = width + "%";
+            if (percent == "true") {
+                element.innerHTML = width + "%";
+            }
+        }
+    }
+}
+
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+      var elements = document.getElementsByClassName("progress-bar"),
+          attribute = [],
+          maxwidth = [],
+          transitions = [],
+          percentages = [],
+          i = 0;
+      var element, max, str, transition, percentage;
+      for (var i = 0; i < elements.length; i++) {
+          element = elements[i];
+          if (element.getAttribute("data-showanimation") !== "false"){
+              if (element.getAttribute("data-progress") === "timer" && (element.getAttribute("data-time") !== "" && element.getAttribute("data-progress") != null)) {
+                  var label = element.getAttribute("show-label");
+                  label = label === "" || label == null ? "false":document.getElementById(label);
+                  var btn = document.getElementById(element.getAttribute("toggle-btn"));
+                  btn.onclick = function(){movetime(element, element.getAttribute("data-time"), label)};
+              }
+          }
+      }
+  }, false);
+})();
+
+function setminl(num) {
+    var snum = num.toString();
+    while (snum.length < 2) {
+        snum = "0" + snum;
+    }
+    return snum;
+}
+
+function convert(time) {
+    var minutes = time/60|0,
+        seconds = time % 60;
+    var hours = minutes/60|0;
+    minutes = minutes % 60;
+    return [setminl(hours), setminl(minutes), setminl(seconds)]
+}
+
+var i = 0;
+function movetime(element, time, label) {
+    var width = time;
+    var id = setInterval(frame, 1000);
+    function frame() {
+        if (width === 0) {
+            clearInterval(id);
+        } 
+        else {
+            width--;
+            element.style.width = (width/time)*100 + "%";
+            if (label !== "false") {
+                var remain = convert(width);
+                label.innerHTML = "Remaining Time: " + remain[0] + ":" + remain[1] + ":" + remain[2];
+            }
+        }
+    }
+}
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  var elements = document.getElementsByClassName("scroll-indicator");
+  for (var i = 0; i < elements.length; i++) {
+      elements[i].style.width = scrolled + "%";
   }
 }

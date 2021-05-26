@@ -1,7 +1,7 @@
 /*Copyright 2021 Bhogi7589*/
 
 /*Scrolling*/
-html {scroll-behavior: smooth!important} ::-webkit-scrollbar {width: 10px; min-height: 50px; background: transparent; border-radius: 15rem; margin: 0 5px} ::-webkit-scrollbar-track {background: #e0e0e0; border-radius: 15rem; margin: 0 5px} ::-webkit-scrollbar-thumb {background: #888; border-radius: 15rem; min-height: 150px; margin: 10px; margin: 0 5px} ::-webkit-scrollbar-thumb:hover {background: #555; border-radius: 15rem; min-height: 150px; margin: 10px; margin: 0 5px}
+html {scroll-behavior: smooth!important}
 
 /*Headings*/
 .display-1 {font-weight: 900!important} .display-2 {font-weight: 800!important} .display-3 {font-weight: 700!important} .display-4 {font-weight: bold!important} .heading {padding: 20px 10px!important; font-weight: bold!important; text-decoration: underline!important} .heading-medium {font-size: 75px!important} .heading-large {font-size: 100px!important} .heading-small {font-size: 50px!important} .heading-red {color: #f00} .heading-orange {color: #f70} .heading-yellow {color: #ff0} .heading-green {color: #0f0} .heading-cyan {color: #0ff} .heading-blue {color: #00f} .heading-indigo {color: #4B0082} .heading-violet {color: #800080}
@@ -25,7 +25,7 @@ body {text-align: center; justify-content: center; margin: auto; line-height: 1.
 button {cursor: pointer} .btn {box-shadow: 2px 3px 2px #aaa!important}
 
 /*Sections*/
-.section {padding: 160px 10px}
+.section {padding: 100px 10px}
 
 /*Navbar*/         
 .navbar-brand {font-weight: 900!important; font-size: 35px!important} .navbar {font-weight: 700; transition: opacity 0.4s; opacity: 0.85; font-size: 25px; box-shadow: 0 3px 2px #777} .navbar-toggler {outline: none!important; border: none!important; font-size: 30px} .nav-item, .navbar-toggler, .navbar-brand {transition: transform 0.4s; opacity: 1; padding-left: 20px!important; padding-right: 20px!important} .navbar-brand:hover {transform: scale(1.15)} .navbar-toggler:hover {transform: scale(1.15)} .nav-item:hover {transform: scale(1.15)} .navbar:hover {opacity: 1}
@@ -50,3 +50,9 @@ button {cursor: pointer} .btn {box-shadow: 2px 3px 2px #aaa!important}
 
 /*Float Right and Left*/
 .float-right {float: right!important} .float-left {float: left!important}
+
+/*Timer Bars*/
+.timer-label {padding: 5px 30px} .timer-btn {margin: 5px 30px;}
+
+/*Scroll Indicator*/
+.scroll-container {width: 100%!important; height: 8px!important; background-color: #fff!important; display: block!important; position: fixed!important; top: 0!important; z-index: 9999999!important} .scroll-indicator {height: 100%!important; width: 0%}

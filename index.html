@@ -2,6 +2,7 @@
 <html id="home">
     <head>
         <title>BS4 Helper</title>
+        <link rel="icon" href="https://brandslogos.com/wp-content/uploads/thumbs/bootstrap-logo-vector.svg">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="bs4-helper.css">
         <link rel="stylesheet" href="bs4-helper-bg-colors.css">
@@ -14,6 +15,9 @@
         <script src="bs4-helper.js"></script>
     </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <div class="scroll-container">
+            <div class="scroll-indicator bg-success"></div>
+        </div>
         <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
             <a class="navbar-brand" href="#home">Home</a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation"><span class="navbar-toggler-icon"></span></button>
@@ -24,6 +28,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Preview</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#progress">BS4 Helper Growing Progress Bars</a>
+                            <a class="dropdown-item" href="#scroll">BS4 Helper Scroll Indicators</a>
                             <a class="dropdown-item" href="#headings">BS4 Helper Headings</a>
                             <a class="dropdown-item" href="#highvsnorm">Highlighted Text vs. Normal Text</a>
                             <a class="dropdown-item" href="#tltip">BS4 Helper Tooltip</a>
@@ -37,8 +42,8 @@
             <!-- hitwebcounter Code START -->
             <p class="text-red">Number of visits:</p>&nbsp;&nbsp;
             <a href="https://www.hitwebcounter.com" target="_blank">
-                <img src="https://hitwebcounter.com/counter/counter.php?page=7816178&style=0010&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" />
-            </a>                                    
+                <img src="https://hitwebcounter.com/counter/counter.php?page=7817587&style=0010&nbdigits=7&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" />
+            </a>
         </nav>
         <div class="container bg-rainbow" id="body">
             <div class="section" id="howtouse">
@@ -79,6 +84,22 @@
                 <div class="progress">
                     <div class="progress-bar bg-success" data-progress="grow" data-transition=10 data-max-width=95 show-percentage="true"></div>
                 </div>
+                <h1 class="heading">Shrinking Progress Bar</h1>
+                <div class="progress">
+                    <div class="progress-bar bg-success" data-progress="shrink" data-transition=10 data-min-width=25 show-percentage="true"></div>
+                </div>
+                <h1 class="heading">Timer Bar</h1>
+                <div class="progress">
+                    <div class="progress-bar bg-success" data-progress="timer" data-time=120 toggle-btn="mybtn" show-label="myp"></div>
+                </div>
+                <div class="row">
+                    <button class="btn btn-outline-success timer-btn float-left" id="mybtn">Start Timer</button>
+                    <p class="text-white timer-label" style="text-align: right" id="myp">Remaining Time: 00:02:00</p>
+                </div>
+            </div>
+            <div class="section" id="scroll">
+                <h1 class="heading heading-medium">BS4 Helper Scroll Indicators</h1>
+                <p class="heading-small text-red">Look at the top to see the scroll indicator and scroll this page to see the effect.</p>
             </div>
             <div class="section" id="headings">
                 <h1 class="heading heading-medium">BS4 Helper Headings</h1>
@@ -165,6 +186,7 @@
                 <p class="rotate-350">Text Rotated by 350 degrees(.rotate-350)</p>
                 <p class="rotate-360">Text Rotated by 360 degrees(.rotate-360)</p>
             </div>
+            
             <footer class="blockquote-footer heading-small text-right">By Bhogi7589</footer>
         </div>
     </body>
