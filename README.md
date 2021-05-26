@@ -1,7 +1,3 @@
-# BS4 Helper v1.0.3
-
-Added Glyphicons from Bootstrap 3.
-
 # BS4 Helper v1.0.2
 
 Added Scroll Indicators, Shrinking Progress Bars and Timer Bars.
