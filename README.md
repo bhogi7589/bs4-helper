@@ -1,6 +1,6 @@
 # BS4 Helper v1.0.2
 
-Added Shrinking Progress Bars and Timer Bars.
+Added Scroll Indicators, Shrinking Progress Bars and Timer Bars.
 
 Way to use:
 
@@ -8,7 +8,10 @@ Shrinking Progress Bars:
 Replace `data-progress="grow"` with `data-progress="shrink"` and (if you have added this) `data-max-width` to `data-min-width`.
 
 Timer Bars:
-Replace `data-progress="grow"` with `data-progress="timer"` and add `data-time=[time in seconds]` and `toggle-btn=[toggler button id]`. If you want to show the amount of time left in a label, add `show-label=[label id]`. Add the `.timer-label` class to the timer label.
+Replace `data-progress="grow"` with `data-progress="timer"` and add `data-time=[time in seconds]` and `toggle-btn=[toggler button id]`. If you want to show the amount of time left in a label, add `show-label=[label id]`. Add the `.timer-btn` class to the timer toggler. Also, add the `.timer-label` class to the timer label.
+
+Scroll Indicators:
+Add the `.scroll-container` class to the Scroll Indicator Container and the `.scroll-indicator` class to the Scroll Indicator.
 
 # BS4 Helper v1.0.1
 
