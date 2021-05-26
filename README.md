@@ -1,3 +1,7 @@
+# BS4 Helper v1.0.3
+
+Added Glyphicons from Bootstrap 3.
+
 # BS4 Helper v1.0.2
 
 Added Scroll Indicators, Shrinking Progress Bars and Timer Bars.
@@ -12,6 +16,8 @@ Replace `data-progress="grow"` with `data-progress="timer"` and add `data-time=[
 
 Scroll Indicators:
 Add the `.scroll-container` class to the Scroll Indicator Container and the `.scroll-indicator` class to the Scroll Indicator.
+
+BS4 Helper only allows one Scroll Indicator, Timer Bar, and Shrinking Progress Bar each.
 
 # BS4 Helper v1.0.1
 
