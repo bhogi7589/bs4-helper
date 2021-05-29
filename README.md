@@ -1,3 +1,7 @@
+# BS4 Helper v1.0.3
+
+Added Pause, Resume, and Reset functionality to Timer Bars. Leave the code as it is for Pause and Resume functionality. For Reset functionality, add `reset-btn=[Reset Button id]` to the Timer Bar.
+
 # BS4 Helper v1.0.2
 
 Added Scroll Indicators, Shrinking Progress Bars and Timer Bars.
