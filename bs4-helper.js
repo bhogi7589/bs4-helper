@@ -185,10 +185,29 @@ function shrink(element, min, trans, percent) {
           element = elements[i];
           if (element.getAttribute("data-showanimation") !== "false"){
               if (element.getAttribute("data-progress") === "timer" && (element.getAttribute("data-time") !== "" && element.getAttribute("data-progress") != null)) {
+                  element.classList.add("timer");
+                  element.style.width = "100%"
                   var label = element.getAttribute("show-label");
                   label = label === "" || label == null ? "false":document.getElementById(label);
-                  var btn = document.getElementById(element.getAttribute("toggle-btn"));
-                  btn.onclick = function(){movetime(element, element.getAttribute("data-time"), label)};
+                  var btnattr = element.getAttribute("toggle-btn")
+                  var btn = btnattr === "" || btnattr == null ? "false":document.getElementById(btnattr);
+                  if (btn != "false") {
+                    btn.classList.add("fa");
+                    btn.classList.add("fa-play");
+                    btn.innerHTML = "";
+                    btn.onclick = function(){movetime(btn, element, element.getAttribute("data-time"), label)};
+                  }
+                  else {
+                    movetime(null, element, element.getAttribute("data-time"), label)
+                  }
+                  var resetbtnattr = element.getAttribute("reset-btn")
+                  var resetbtn = resetbtnattr === "" || resetbtnattr == null ? "false":document.getElementById(resetbtnattr);
+                  if (resetbtn != "false") {
+                    resetbtn.classList.add("fa");
+                    resetbtn.classList.add("fa-rotate-left");
+                    resetbtn.innerHTML = "";
+                    resetbtn.onclick = function(){reset(element.getAttribute("data-time"), element, label);};
+                  }
               }
           }
       }
@@ -211,20 +230,57 @@ function convert(time) {
     return [setminl(hours), setminl(minutes), setminl(seconds)]
 }
 
+function pause(btn, element){
+    if (play) {
+        play = false;
+        btn.classList.remove("fa-pause");
+        btn.classList.add("fa-play");
+        element.classList.add("timer-disabled");
+    }
+    else {
+        play = true;
+        btn.classList.remove("fa-play");
+        btn.classList.add("fa-pause");
+        element.classList.remove("timer-disabled");
+    }
+}
+
+function reset(time, element, label){
+    width = time;
+    element.style.width = "100%";
+    if (label !== "false") {
+        var remain = convert(time);
+        label.innerHTML = "Remaining Time: " + remain[0] + ":" + remain[1] + ":" + remain[2];
+    }
+}
+
 var i = 0;
-function movetime(element, time, label) {
-    var width = time;
-    var id = setInterval(frame, 1000);
+var id;
+var play = true;
+var width;
+function movetime(btn, element, time, label) {
+    if (btn !== null) {
+        btn.classList.add("fa-pause");
+        btn.classList.remove("fa-play");
+        btn.onclick = function(){pause(btn, element);}
+    }
+    width = time;
+    id = setInterval(frame, 1000);
     function frame() {
-        if (width === 0) {
-            clearInterval(id);
-        } 
-        else {
-            width--;
-            element.style.width = (width/time)*100 + "%";
-            if (label !== "false") {
-                var remain = convert(width);
-                label.innerHTML = "Remaining Time: " + remain[0] + ":" + remain[1] + ":" + remain[2];
+        if (play) {
+            if (width === 0) {
+                clearInterval(id);
+                width = time;
+                btn.classList.remove("fa-pause");
+                btn.classList.add("fa-play");
+            } 
+            else {
+                width--;
+                element.style.width = (width/time)*100 + "%";
+                if (label !== "false") {
+                    var remain = convert(width);
+                    label.innerHTML = "Remaining Time: " + remain[0] + ":" + remain[1] + ":" + remain[2];
+                }
             }
         }
     }

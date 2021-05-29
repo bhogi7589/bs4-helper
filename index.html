@@ -2,7 +2,7 @@
 <html id="home">
     <head>
         <title>BS4 Helper</title>
-        <link rel="icon" href="https://brandslogos.com/wp-content/uploads/thumbs/bootstrap-logo-vector.svg">
+        <link rel="icon" href="https://miro.medium.com/max/1024/1*9HanDsRU11ZMsgDGJwN96w.png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="bs4-helper.css">
         <link rel="stylesheet" href="bs4-helper-bg-colors.css">
@@ -18,7 +18,7 @@
         <div class="scroll-container">
             <div class="scroll-indicator bg-success"></div>
         </div>
-        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
             <a class="navbar-brand" href="#home">Home</a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navigation">
@@ -39,11 +39,12 @@
                     </li>
                 </ul>
             </div>
-            <!-- hitwebcounter Code START -->
-            <p class="text-red">Number of visits:</p>&nbsp;&nbsp;
-            <a href="https://www.hitwebcounter.com" target="_blank">
-                <img src="https://hitwebcounter.com/counter/counter.php?page=7817588&style=0010&nbdigits=7&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" />
-            </a>
+            <span class="text-red text-large navbar-text">Number of visits:</span>&nbsp;
+            <span class="text-red navbar-text" id="visits">
+                <a href="https://www.hitwebcounter.com" target="_blank">
+                    <img src="https://hitwebcounter.com/counter/counter.php?page=7818753&style=0010&nbdigits=7&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" />
+                </a>
+            </span>
         </nav>
         <div class="container bg-rainbow" id="body">
             <div class="section" id="howtouse">
@@ -62,8 +63,10 @@
                     &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"&gt;&lt;/script&gt;<br>
                     &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"&gt;&lt;/script&gt;<br>
                     &lt;script src="https://bhogi7589.github.io/bs4-helper/bs4-helper.js"&gt;&lt;/script&gt;<br>
-                    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;&lt;/script&gt;</code>
+                    </code>
                     <br><br>
+                    <h4 class="text-left">You must also import Font Awesome 4 Icons:</h4>
+                    <code class="text-left">&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;</code>
                     <h4 class="text-left">For more colors and background colors, use the colors and background colors style sheets of BS4 Helper:</h4>
                     <code class="text-left">&lt;link rel="stylesheet" href="https://bhogi7589.github.io/bs4-helper/bs4-helper-colors.css"&gt;<br>&lt;link rel="stylesheet" href="https://bhogi7589.github.io/bs4-helper/bs4-helper-bg-colors.css"&gt;</code>
                     <h4 class="text-left">To enable rotated components, use the rotations stylesheet of BS4 Helper:</h4>
@@ -90,16 +93,17 @@
                 </div>
                 <h1 class="heading">Timer Bar</h1>
                 <div class="progress">
-                    <div class="progress-bar bg-success" data-progress="timer" data-time=120 toggle-btn="mybtn" show-label="myp"></div>
+                    <div class="progress-bar bg-success" data-progress="timer" data-time=120 toggle-btn="mybtn" reset-btn="myresetbtn" show-label="myp"></div>
                 </div>
                 <div class="row">
-                    <button class="btn btn-outline-success timer-btn float-left" id="mybtn">Start Timer</button>
+                    <button class="btn btn-outline-success timer-btn float-left" id="mybtn"></button>
+                    <button class="btn btn-outline-light timer-btn float-left" id="myresetbtn"></button>
                     <p class="text-white timer-label" style="text-align: right" id="myp">Remaining Time: 00:02:00</p>
                 </div>
             </div>
             <div class="section" id="scroll">
                 <h1 class="heading heading-medium">BS4 Helper Scroll Indicators</h1>
-                <p class="heading-small text-red">Look at the top to see the scroll indicator and scroll this page to see the effect.</p>
+                <p class="heading-small text-red">Look at the bottom to see the scroll indicator and scroll this page to see the effect.</p>
             </div>
             <div class="section" id="headings">
                 <h1 class="heading heading-medium">BS4 Helper Headings</h1>
