@@ -21,7 +21,7 @@ BS4 Helper only allows one Scroll Indicator, Timer Bar, and Shrinking Progress B
 
 # BS4 Helper v1.0.1
 
-Added `.float-left` and `.float-right` classes. You can create beautiful looking inputs using `.input-group-icon`, `.input-group-icon-pill`, `.input`, and `input-toggle-btn` classes.
+Added `.float-left` and `.float-right` classes. You can create beautiful looking inputs using `.input-group`, `.input-group-pill`, `.input`, and `input-toggle-btn` classes.
 
 # BS4 Helper v1.0.0
 
