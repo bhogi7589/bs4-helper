@@ -315,9 +315,8 @@ function movetime(btn, element, time, label) {
                 reset(time, element, label);
                 play = false;
                 btn.classList.remove("fa-pause");
+                element.classList.add("timer-disabled");
                 btn.classList.add("fa-play");
-                btn.onclick = function(){movetime(btn, element, element.getAttribute("data-time"), label)};
-                clearInterval(id);
             } 
             else {
                 width--;

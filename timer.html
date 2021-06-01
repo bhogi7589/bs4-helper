@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+    <!-- Copyright Bhogi7589 -->
+    <head>
+        <title>Timer Bar Example</title>
+        <link rel="icon" href="https://miro.medium.com/max/1024/1*9HanDsRU11ZMsgDGJwN96w.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bs4-helper.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="bs4-helper.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bs4-helper-colors.css">
+        <link rel="stylesheet" href="bs4-helper-bg-colors.css">
+        <link rel="stylesheet" href="bs4-helper-rotations.css">
+    </head>
+    <body class="bg-cyan-a200">
+        <script>
+            function convert_str(str) {
+                while (str.length < 2) {
+                    str = "0" + str;
+                }
+                return str;
+            }
+            
+            function convertsec(hrs, mnt, sec) {
+                hrs = parseInt(hrs);
+                mnt = parseInt(mnt);
+                sec = parseInt(sec);
+                return (hrs * 3600) + (mnt * 60) + sec;
+            }
+            
+            function setlabelhrs(){
+                document.getElementById("h").innerHTML = convert_str(document.getElementById("hrs").value);
+                document.getElementById("timer_label").innerHTML = "Remaining Time: " + convert_str(document.getElementById("hrs").value) + ":" + convert_str(document.getElementById("mnt").value) + ":" + convert_str(document.getElementById("sec").value);
+                document.getElementById("timer").setAttribute("data-time", convertsec(document.getElementById("hrs").value, document.getElementById("mnt").value, document.getElementById("sec").value));
+            }
+            
+            function setlabelmin(){
+                document.getElementById("m").innerHTML = convert_str(document.getElementById("mnt").value);
+                document.getElementById("timer_label").innerHTML = "Remaining Time: " + convert_str(document.getElementById("hrs").value) + ":" + convert_str(document.getElementById("mnt").value) + ":" + convert_str(document.getElementById("sec").value);
+                document.getElementById("timer").setAttribute("data-time", convertsec(document.getElementById("hrs").value, document.getElementById("mnt").value, document.getElementById("sec").value));
+            }
+            
+            function setlabelsec(){
+                document.getElementById("s").innerHTML = convert_str(document.getElementById("sec").value);
+                document.getElementById("timer_label").innerHTML = "Remaining Time: " + convert_str(document.getElementById("hrs").value) + ":" + convert_str(document.getElementById("mnt").value) + ":" + convert_str(document.getElementById("sec").value);
+                document.getElementById("timer").setAttribute("data-time", convertsec(document.getElementById("hrs").value, document.getElementById("mnt").value, document.getElementById("sec").value));
+            }
+        </script>
+        <div class="container bg-brown-200">
+            <h1 class="heading heading-medium heading-yellow">Timer Bar Example</h1>
+            <form id="time">
+                <label for="hrs">Hours(between 0 and 23):</label>&nbsp;&nbsp;
+                <input type="range" onmousemove="setlabelhrs()" min="0" max="24" value=0 id="hrs" style="width: 80%; padding: 0!important; height: 20px"><br>
+                <label for="mnt">Minutes(between 0 and 59):</label>&nbsp;&nbsp;
+                <input type="range" onmousemove="setlabelmin()" min="0" max="59" value=0 id="mnt" style="width: 80%; padding: 0!important; height: 20px"><br>
+                <label for="sec">Hours(between 0 and 59):</label>&nbsp;&nbsp;
+                <input type="range" onmousemove="setlabelsec()" min="0" max="59" value=10 id="sec" style="width: 80%; padding: 0!important; height: 20px"><br>
+            </form>
+            <p class="text-large text-white">Time set: <span id="h">00</span>:<span id="m">00</span>:<span id="s">10</span></p>
+            <!-- The Timer Bar -->
+            <div class="progress">
+                <div class="progress-bar" data-progress="timer" toggle-btn="timer_toggle" reset-btn="timer_reset" show-label="timer_label" data-time=10 id="timer"></div>
+            </div>
+            <div class="row">
+                <button class="timer-btn btn btn-outline-success" id="timer_toggle"></button>
+                <button class="timer-btn btn btn-outline-light" id="timer_reset"></button>
+                <p class="timer-label text-white" id="timer_label">Remaining Time: 00:00:10</p>
+            </div>
+            <footer class="blockquote-footer text-xl text-right">By Bhogi7589</footer>
+        </div>
+    </body>
+</html>
