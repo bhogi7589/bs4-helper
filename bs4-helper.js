@@ -314,6 +314,7 @@ function movetime(btn, element, time, label) {
             if (width === 0) {
                 clearInterval(id);
                 reset(time, element, label);
+                play = false;
                 btn.classList.remove("fa-pause");
                 btn.classList.add("fa-play");
             } 
