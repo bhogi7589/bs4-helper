@@ -312,11 +312,11 @@ function movetime(btn, element, time, label) {
     function frame() {
         if (play) {
             if (width === 0) {
-                clearInterval(id);
                 reset(time, element, label);
                 play = false;
                 btn.classList.remove("fa-pause");
                 btn.classList.add("fa-play");
+                clearInterval(id);
             } 
             else {
                 width--;
