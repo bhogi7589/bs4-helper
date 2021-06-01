@@ -138,6 +138,7 @@ function move_load(element) {
         clearInterval(id);
         i = 0;
         width = 0;
+        element.style.visibility = "hidden";
       } else {
         width++;
         element.style.width = width + "%";
@@ -312,7 +313,7 @@ function movetime(btn, element, time, label) {
         if (play) {
             if (width === 0) {
                 clearInterval(id);
-                width = time;
+                reset(time, element, label);
                 btn.classList.remove("fa-pause");
                 btn.classList.add("fa-play");
             } 
