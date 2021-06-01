@@ -109,6 +109,48 @@ function move(element, max, trans, percent) {
   window.addEventListener('load', function() {
       var elements = document.getElementsByClassName("progress-bar"),
           attribute = [],
+          i = 0;
+      var element;
+      for (var i = 0; i < elements.length; i++) {
+          element = elements[i];
+          if (element.getAttribute("data-showanimation") !== "false"){
+              if (element.getAttribute("data-progress") === "loading") {
+                  attribute.push(element);
+                  element.innerHTML = "Loading...";
+              }
+          }
+      }
+      for (var n = 0; n < attribute.length; n++) {
+          element = attribute[n];
+          move_load(element);
+      }
+  }, false);
+})();
+
+var i = 0;
+function move_load(element) {
+  if (i == 0) {
+    i = 1;
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+        width = 0;
+      } else {
+        width++;
+        element.style.width = width + "%";
+      }
+    }
+  }
+}
+
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+      var elements = document.getElementsByClassName("progress-bar"),
+          attribute = [],
           maxwidth = [],
           transitions = [],
           percentages = [],
