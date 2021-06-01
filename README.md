@@ -1,6 +1,6 @@
 # BS4 Helper v1.0.4
 
-Added different colors for input groups, Loading Progress Bars, and BS3 Glyphicons. Loading Progress Bars are just like Growing ones, but they grow up to 100% width and will take 1 second to finish the animation. To use them, just add `data-progress="loading"` to the progress bar.
+Added different colors for input groups and Loading Progress Bars. Loading Progress Bars are just like Growing ones, but they grow up to 100% width and will take 1 second to finish the animation. To use them, just add `data-progress="loading"` to the progress bar.
 
 **Note: BS4 Helper allows only *one* Loading Progress Bar per page.**
 
