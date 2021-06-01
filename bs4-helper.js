@@ -316,6 +316,7 @@ function movetime(btn, element, time, label) {
                 play = false;
                 btn.classList.remove("fa-pause");
                 btn.classList.add("fa-play");
+                btn.onclick = function(){movetime(btn, element, element.getAttribute("data-time"), label)};
                 clearInterval(id);
             } 
             else {
