@@ -27,7 +27,7 @@ Add the `.scroll-container` class to the Scroll Indicator Container and the `.sc
 
 # BS4 Helper v1.0.1
 
-Added `.float-left` and `.float-right` classes. You can create beautiful looking inputs using `.input-group`, `.input-group-pill`, `.input`, and `input-toggle-btn` classes.
+Added `.float-left` and `.float-right` classes. You can create beautiful looking inputs using `.input-group-button`, `.input-group-button-pill`, `.input`, and `input-toggle-btn` classes.
 
 # BS4 Helper v1.0.0
 
