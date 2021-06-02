@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-    <!-- Copyright Bhogi7589 -->
+    <!-- Copyright 2021 Bhogi7589 -->
     <head>
         <title>Timer Bar Example</title>
         <link rel="icon" href="https://miro.medium.com/max/1024/1*9HanDsRU11ZMsgDGJwN96w.png">
@@ -53,11 +53,11 @@
             <h1 class="heading heading-medium heading-yellow">Timer Bar Example</h1>
             <form id="time">
                 <label for="hrs">Hours(between 0 and 23):</label>&nbsp;&nbsp;
-                <input type="range" onmousemove="setlabelhrs()" min="0" max="24" value=0 id="hrs" style="width: 80%; padding: 0!important; height: 20px"><br>
+                <input type="range" onmousemove="setlabelhrs()" onchange="setlabelhrs()" min="0" max="24" value=0 id="hrs" style="width: 80%; padding: 0!important; height: 20px"><br>
                 <label for="mnt">Minutes(between 0 and 59):</label>&nbsp;&nbsp;
-                <input type="range" onmousemove="setlabelmin()" min="0" max="59" value=0 id="mnt" style="width: 80%; padding: 0!important; height: 20px"><br>
-                <label for="sec">Hours(between 0 and 59):</label>&nbsp;&nbsp;
-                <input type="range" onmousemove="setlabelsec()" min="0" max="59" value=10 id="sec" style="width: 80%; padding: 0!important; height: 20px"><br>
+                <input type="range" onmousemove="setlabelmin()" onchange="setlabelmin()" min="0" max="59" value=0 id="mnt" style="width: 80%; padding: 0!important; height: 20px"><br>
+                <label for="sec">Seconds(between 0 and 59):</label>&nbsp;&nbsp;
+                <input type="range" onmousemove="setlabelsec()" onchange="setlabelsec()" min="0" max="59" value=10 id="sec" style="width: 80%; padding: 0!important; height: 20px"><br>
             </form>
             <p class="text-large text-white">Time set: <span id="h">00</span>:<span id="m">00</span>:<span id="s">10</span></p>
             <!-- The Timer Bar -->
