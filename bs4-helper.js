@@ -1,3 +1,5 @@
+//Copyright 2021 Bhogi7589
+
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 });
