@@ -1,14 +1,14 @@
-# BS4 Helper v1.0.4
+# BS4 Helper v1.1.2
 
 Added different colors for input groups and Loading Progress Bars. Loading Progress Bars are just like Growing ones, but they grow up to 100% width and will take 1 second to finish the animation. To use them, just add `data-progress="loading"` to the progress bar.
 
 **Note: BS4 Helper allows only *one* Loading Progress Bar per page.**
 
-# BS4 Helper v1.0.3
+# BS4 Helper v1.1.1
 
 Added Pause, Resume, and Reset functionality to Timer Bars. Leave the code as it is for Pause and Resume functionality. For Reset functionality, add `reset-btn=[Reset Button id]` to the Timer Bar.
 
-# BS4 Helper v1.0.2
+# BS4 Helper v1.1.0
 
 Added Scroll Indicators, Shrinking Progress Bars and Timer Bars.
 
