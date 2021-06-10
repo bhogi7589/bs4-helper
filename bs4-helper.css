@@ -61,4 +61,4 @@ button {cursor: pointer; box-shadow: 0.125rem 0.1875rem 0.125rem #aaa!important}
 .container, .container-fluid {margin-bottom: 1.25rem!important; padding-top: 1.25rem!important; border-radius: 0.3125rem!important; padding-bottom: 1.25rem!important; height: 100%!important; background-color: #ddd!important} .theme-dark .container, .theme-dark .container-fluid {background-color: #222!important}
 
 /*HTML Elements*/
-ul {font-size: 0.75em!important} ul ul {font-size: 0.75em!important}
+ul.list {font-size: 0.75em!important} ul.list ul.list {font-size: 0.75em!important}
