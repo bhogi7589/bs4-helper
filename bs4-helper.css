@@ -65,4 +65,4 @@ ul.list {font-size: 0.75em!important} ul.list ul.list {font-size: 0.75em!importa
 
 /*Thumbnails*/
 
-.thumbnail, .img-thumbnail {padding: .25rem; background-color: transparent!important}
+.thumbnail {padding:.25rem; background-color:#fff; border:1px solid #dee2e6; border-radius:.25rem; max-width:100%; height:auto} .theme-dark .thumbnail, .theme-dark .img-thumbnail {background-color: #222!important}
