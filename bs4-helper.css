@@ -21,7 +21,7 @@ a.link:link {color: blue; text-decoration: none} a.link:visited {color: blue; te
 /*Body*/
 body {text-align: center; justify-content: center; margin: auto}
 /*Buttons*/
-.btn {cursor: pointer!important; box-shadow: 0.125rem 0.1875rem 0.125rem #aaa!important} .close {box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important}
+.btn {cursor: pointer!important; box-shadow: 0.125rem 0.1875rem 0.125rem #aaa!important} .close {box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important; outline: none!important}
 
 
 /*Sections*/
