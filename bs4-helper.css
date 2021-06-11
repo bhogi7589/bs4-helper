@@ -19,10 +19,10 @@ a.link:link {color: blue; text-decoration: none} a.link:visited {color: blue; te
 .clickable {cursor: pointer}
 
 /*Body*/
-body {text-align: center; justify-content: center; margin: auto} .close {box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important}
-
+body {text-align: center; justify-content: center; margin: auto}
 /*Buttons*/
-.btn {cursor: pointer!important; box-shadow: 0.125rem 0.1875rem 0.125rem #aaa!important}
+.btn {cursor: pointer!important; box-shadow: 0.125rem 0.1875rem 0.125rem #aaa!important} .close {box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important}
+
 
 /*Sections*/
 .section {margin: 6.25rem 0rem!important; border-radius: 0.3125rem!important; padding: 3rem 0.625rem!important}
