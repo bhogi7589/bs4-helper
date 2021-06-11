@@ -19,7 +19,7 @@ a.link:link {color: blue; text-decoration: none} a.link:visited {color: blue; te
 .clickable {cursor: pointer}
 
 /*Body*/
-body {text-align: center; justify-content: center; margin: auto}
+body {text-align: center; justify-content: center; margin: auto} .close {box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important}
 
 /*Buttons*/
 .btn {cursor: pointer!important; box-shadow: 0.125rem 0.1875rem 0.125rem #aaa!important}
@@ -64,4 +64,4 @@ body {text-align: center; justify-content: center; margin: auto}
 ul.list {font-size: 0.75em!important} ul.list ul.list {font-size: 0.75em!important}
 
 /*Modals*/
-.modal-content {box-shadow: 5px 5px 5px #000} .theme-dark .modal-content {box-shadow: 5px 5px 5px #fff!important; color: #fff!important; background-color: #000!important}
+.modal-content {box-shadow: 5px 5px 5px #000} .theme-dark .modal-content {box-shadow: 5px 5px 5px #fff!important; color: #fff!important; background-color: #000!important} .theme-dark .modal-content .close {color: #fff!important}
