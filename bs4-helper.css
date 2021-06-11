@@ -64,4 +64,4 @@ body {text-align: center; justify-content: center; margin: auto}
 ul.list {font-size: 0.75em!important} ul.list ul.list {font-size: 0.75em!important}
 
 /*Modals*/
-.modal-content {box-shadow: 5px 5px 5px #000} .theme-dark .modal-content {box-shadow: 5px 5px 5px #fff!important; color: #fff!important; background-color: #000!important} .theme-dark .modal-content .close {color: #fff!important}
+.modal-content {box-shadow: 3px 3px 5px #000; border: 2px solid #000!important} .theme-dark .modal-content {box-shadow: 3px 3px 5px #fff!important; color: #fff!important; background-color: #000!important; border: 2px solid #fff!important} .theme-dark .modal-content .close {color: #fff!important}
