@@ -64,4 +64,4 @@ body {text-align: center; justify-content: center; margin: auto}
 ul.list {font-size: 0.75em!important} ul.list ul.list {font-size: 0.75em!important}
 
 /*Modals*/
-.modal {box-shadow: 5px 5px 5px #000} .theme-dark .modal {box-shadow: 5px 5px 5px #fff!important; color: #fff!important; background-color: #000!important}
+.modal-backdrop {box-shadow: 5px 5px 5px #000} .theme-dark .modal-backdrop {box-shadow: 5px 5px 5px #fff!important; color: #fff!important; background-color: #000!important}
