@@ -58,7 +58,7 @@ body {text-align: center; justify-content: center; margin: auto}
 .scroll-container {width: 100%!important; height: .78125rem!important; background-color: #fff!important; display: block!important; position: fixed!important; bottom: 0!important; z-index: 9999999!important} .scroll-indicator {height: 100%!important; width: 0%}
 
 /*Containers*/
-.container, .container-fluid {margin-bottom: 1.25rem!important; padding-top: 1.25rem!important; border-radius: 0.3125rem!important; padding-bottom: 1.25rem!important; height: 100%!important; background-color: #ddd!important; margin-left: auto; margin-right: auto} .theme-dark .container, .theme-dark .container-fluid {background-color: #222!important}
+.container, .container-fluid {margin-bottom: 1.25rem!important; padding-top: 1.25rem!important; border-radius: 0.3125rem!important; padding-bottom: 1.25rem!important; height: 100%!important; background-color: #ddd!important} .theme-dark .container, .theme-dark .container-fluid {background-color: #222!important}
 
 /*HTML Elements*/
 ul.list {font-size: 0.75em!important} ul.list ul.list {font-size: 0.75em!important}
