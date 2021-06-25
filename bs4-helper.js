@@ -1,4 +1,4 @@
-//Copyright 2021 Bhogi7589
+//Copyright 2021 Karthikeya
 
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
