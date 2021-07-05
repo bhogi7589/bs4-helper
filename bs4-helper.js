@@ -1,4 +1,4 @@
-//Copyright 2021 Karthikeya
+//Copyright 2021 Karthikeya Kaza
 
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
