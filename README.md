@@ -1,8 +1,7 @@
 <div align="center">
+  ![Icon](https://github.com/bhogi7589/bs4-helper/blob/main/Icon.png)
 # BS4 Helper
   
-  ![Icon](https://github.com/bhogi7589/bs4-helper/blob/main/Icon.png)
-
 ## jQuery Initialization
 
 Without BS4 Helper you have to initialize elements like tooltips yourself with `jQuery`. But, BS4 Helper does all that initialization for you. Just import it by following this [link](https://bhogi7589.github.io/bs4-helper)!
