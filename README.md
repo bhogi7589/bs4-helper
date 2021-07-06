@@ -2,7 +2,7 @@
   
   ![Icon](https://github.com/bhogi7589/bs4-helper/blob/main/Icon.png)
   
-# BS4 Helper by **Karthikeya Kaza**
+# A Framework for Bootstrap 4 Additional Components and Styles - BS4 Helper by Karthikeya Kaza
     
 ## jQuery Initialization
 
