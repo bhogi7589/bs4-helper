@@ -1,4 +1,6 @@
 /*Copyright 2021 Karthikeya Kaza*/
+/*A Framework for Bootstrap 4 Additional Components and Styles - BS4 Helper.*/
+
 /*Rotations*/
 
 .rotate-1 {transform: rotate(1deg)!important; -webkit-transform: rotate(1deg)!important; -moz-transform: rotate(1deg)!important; -ms-transform: rotate(1deg)!important; -o-transform: rotate(1deg)!important; padding: 200px!important}

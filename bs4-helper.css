@@ -1,4 +1,5 @@
 /*Copyright 2021 Karthikeya Kaza*/
+/*A Framework for Bootstrap 4 Additional Components and Styles - BS4 Helper.*/
 
 /*Scrolling*/
 html {scroll-behavior: smooth!important; overflow-x: hidden!important} ::-webkit-scrollbar {width: 0.625rem} ::-webkit-scrollbar-track {box-shadow: inset 0 0 .3125rem grey; border-radius: 10rem} ::-webkit-scrollbar-thumb {background: #888; border-radius: 10rem} ::-webkit-scrollbar-thumb:hover {background: #555}

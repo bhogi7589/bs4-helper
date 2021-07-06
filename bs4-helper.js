@@ -1,4 +1,5 @@
 //Copyright 2021 Karthikeya Kaza
+//A Framework for Bootstrap 4 Additional Components and Styles - BS4 Helper.
 
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
