@@ -12,6 +12,7 @@ mark {background-color: #ff0!important; padding: 0!important} code {display: inl
 /*Special*/
 .text-black-50 {color: rgba(0, 0, 0, 0.5)}
 .text-white-50 {color: rgba(255, 255, 255, 0.5)}
+.text-border {color: rgba(0, 0, 0, 0)!important; -webkit-text-stroke-width: 1.5px; -webkit-text-stroke-color: #000} .theme-dark .text-border {-webkit-text-stroke-color: #fff} .text-border-red {-webkit-text-stroke-color: #f00} .text-border-orange {-webkit-text-stroke-color: #f70} .text-border-yellow {-webkit-text-stroke-color: #ff0} .text-border-green {-webkit-text-stroke-color: #0f0} .text-border-cyan {-webkit-text-stroke-color: #0ff} .text-border-blue {-webkit-text-stroke-color: #00f} .text-border-indigo {-webkit-text-stroke-color: #4B0082} .text-border-violet {-webkit-text-stroke-color: #800080}
 
 /*Links*/
 a.link:link {color: blue; text-decoration: none} a.link:visited {color: blue; text-decoration: none} a.link:hover {color: black; text-decoration: none} a.link:active {color: black; text-decoration: none} a.link {cursor: pointer; transition: color 0.4s; font-weight: bold}
@@ -29,7 +30,7 @@ body {text-align: center; justify-content: center; margin: auto}
 .section {margin: 6.25rem 0rem!important; border-radius: 0.3125rem!important; padding: 3rem 0.625rem!important}
 
 /*Navbar*/         
-.navbar-brand {font-weight: 900!important; font-size: 2.1875rem!important} .navbar {width: 100vw!important; font-weight: 700; transition: opacity 0.4s; opacity: 0.85; font-size: 1.5625rem!important; box-shadow: 0 0 0.125rem .125rem #777!important} .nav-item, .navbar-brand {transition: transform 0.4s; opacity: 1; padding-left: 1.25rem!important; padding-right: 1.25rem!important} .navbar-brand:hover {transform: scale(1.25)} .nav-item:hover {transform: scale(1.25)} .navbar:hover {opacity: 1} .navbar-toggler {font-size: 1.875rem!important; box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important; outline: none!important; margin-left: 1.25rem!important; margin-right: 1.25rem!important}
+.navbar-brand {font-weight: 900!important; font-size: 2.1875rem!important} .navbar {width: 100vw!important; font-weight: 700; transition: opacity 0.4s; opacity: 0.85; font-size: 1.5625rem!important; box-shadow: 0 0 0.125rem .125rem #777!important} .nav-item, .navbar-brand {transition: transform 0.4s; opacity: 1; padding-left: 1.25rem!important; padding-right: 1.25rem!important} .navbar-brand:hover {transform: scale(1.15)} .nav-item:hover {transform: scale(1.15)} .navbar:hover {opacity: 1} .navbar-toggler {font-size: 1.875rem!important; box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important; outline: none!important; margin-left: 1.25rem!important; margin-right: 1.25rem!important}
 
 /*Round Elements*/
 .pill {border-radius:10rem!important}
