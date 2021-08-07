@@ -36,54 +36,51 @@ $(".custom-file-input").on("change", function() {
   }, false);
 })();
 
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-      var elements = document.getElementsByClassName("progress-bar"),
-          attribute = [],
-          maxwidth = [],
-          transitions = [],
-          percentages = [],
-          i = 0;
-      var element, max, str, transition, percentage;
-      for (var i = 0; i < elements.length; i++) {
-          element = elements[i];
-          if (element.getAttribute("data-showanimation") !== "false"){
-              if (element.getAttribute("data-progress") === "grow") {
-                  attribute.push(element);
-                  max = element.getAttribute("data-max-width");
-                  if (max === "" || max == null) {
-                      maxwidth.push(100);
-                  }
-                  else {
-                      maxwidth.push(max);
-                  }
-                  transition = element.getAttribute("data-transition");
-                  if (transition === "" || transition == null) {
-                      transitions.push(30);
-                  }
-                  else {
-                      transitions.push(transition);
-                  }
-                  percentage = element.getAttribute("show-percentage");
-                  if (percentage === "" || percentage == null) {
-                      percentages.push("false");
-                  }
-                  else {
-                      percentages.push(percentage);
-                  }
-              }
-          }
-      }
-      for (var n = 0; n < attribute.length; n++) {
-          element = attribute[n];
-          max = maxwidth[n];
-          transition = transitions[n];
-          percentage = percentages[n];
-          move(element, max, transition, percentage);
-      }
-  }, false);
-})();
+window.addEventListener('load', function() {
+    var elements = document.getElementsByClassName("progress-bar"),
+        attribute = [],
+        maxwidth = [],
+        transitions = [],
+        percentages = [],
+        i = 0;
+    var element, max, str, transition, percentage;
+    for (var i = 0; i < elements.length; i++) {
+        element = elements[i];
+        if (element.getAttribute("data-showanimation") !== "false"){
+            if (element.getAttribute("data-progress") === "grow") {
+                attribute.push(element);
+                max = element.getAttribute("data-max-width");
+                if (max === "" || max == null) {
+                    maxwidth.push(100);
+                }
+                else {
+                    maxwidth.push(max);
+                }
+                transition = element.getAttribute("data-transition");
+                if (transition === "" || transition == null) {
+                    transitions.push(30);
+                }
+                else {
+                    transitions.push(transition);
+                }
+                percentage = element.getAttribute("show-percentage");
+                if (percentage === "" || percentage == null) {
+                    percentages.push("false");
+                }
+                else {
+                    percentages.push(percentage);
+                }
+            }
+        }
+    }
+    for (var n = 0; n < attribute.length; n++) {
+        element = attribute[n];
+        max = maxwidth[n];
+        transition = transitions[n];
+        percentage = percentages[n];
+        move(element, max, transition, percentage);
+    }
+});
 
 var i = 0;
 function move(element, max, trans, percent) {
@@ -107,28 +104,24 @@ function move(element, max, trans, percent) {
   }
 }
 
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-      var elements = document.getElementsByClassName("progress-bar"),
-          attribute = [],
-          i = 0;
-      var element;
-      for (var i = 0; i < elements.length; i++) {
-          element = elements[i];
-          if (element.getAttribute("data-showanimation") !== "false"){
-              if (element.getAttribute("data-progress") === "loading") {
-                  attribute.push(element);
-                  element.innerHTML = "Loading...";
-              }
-          }
-      }
-      for (var n = 0; n < attribute.length; n++) {
-          element = attribute[n];
-          move_load(element);
-      }
-  }, false);
-})();
+window.addEventListener('load', function() {
+    var elements = document.getElementsByClassName("progress-bar"),
+        attribute = [],
+        i = 0;
+    var element;
+    for (var i = 0; i < elements.length; i++) {
+        element = elements[i];
+        if (element.getAttribute("data-showanimation") !== "false"){
+            if (element.getAttribute("data-progress") === "loading") {
+                attribute.push(element);
+            }
+        }
+    }
+    for (var n = 0; n < attribute.length; n++) {
+        element = attribute[n];
+        move_load(element);
+    }
+});
 
 var i = 0;
 function move_load(element) {
@@ -150,54 +143,52 @@ function move_load(element) {
   }
 }
 
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-      var elements = document.getElementsByClassName("progress-bar"),
-          attribute = [],
-          maxwidth = [],
-          transitions = [],
-          percentages = [],
-          i = 0;
-      var element, max, str, transition, percentage;
-      for (var i = 0; i < elements.length; i++) {
-          element = elements[i];
-          if (element.getAttribute("data-showanimation") !== "false"){
-              if (element.getAttribute("data-progress") === "shrink") {
-                  attribute.push(element);
-                  max = element.getAttribute("data-min-width");
-                  if (max === "" || max == null) {
-                      maxwidth.push(0);
-                  }
-                  else {
-                      maxwidth.push(max);
-                  }
-                  transition = element.getAttribute("data-transition");
-                  if (transition === "" || transition == null) {
-                      transitions.push(30);
-                  }
-                  else {
-                      transitions.push(transition);
-                  }
-                  percentage = element.getAttribute("show-percentage");
-                  if (percentage === "" || percentage == null) {
-                      percentages.push("false");
-                  }
-                  else {
-                      percentages.push(percentage);
-                  }
-              }
-          }
-      }
-      for (var n = 0; n < attribute.length; n++) {
-          element = attribute[n];
-          max = maxwidth[n];
-          transition = transitions[n];
-          percentage = percentages[n];
-          shrink(element, max, transition, percentage);
-      }
-  }, false);
-})();
+window.addEventListener('load', function() {
+    var elements = document.getElementsByClassName("progress-bar"),
+        attribute = [],
+        maxwidth = [],
+        transitions = [],
+        percentages = [],
+        i = 0;
+    var element, max, str, transition, percentage;
+    for (var i = 0; i < elements.length; i++) {
+        element = elements[i];
+        if (element.getAttribute("data-showanimation") !== "false"){
+            if (element.getAttribute("data-progress") === "shrink") {
+                attribute.push(element);
+                max = element.getAttribute("data-min-width");
+                if (max === "" || max == null) {
+                    maxwidth.push(0);
+                }
+                else {
+                    maxwidth.push(max);
+                }
+                transition = element.getAttribute("data-transition");
+                if (transition === "" || transition == null) {
+                    transitions.push(30);
+                }
+                else {
+                    transitions.push(transition);
+                }
+                percentage = element.getAttribute("show-percentage");
+                if (percentage === "" || percentage == null) {
+                    percentages.push("false");
+                }
+                else {
+                    percentages.push(percentage);
+                }
+            }
+        }
+    }
+    for (var n = 0; n < attribute.length; n++) {
+        element = attribute[n];
+        max = maxwidth[n];
+        transition = transitions[n];
+        percentage = percentages[n];
+        shrink(element, max, transition, percentage);
+    }
+});
+
 
 function shrink(element, min, trans, percent) {
     var width = 100;
@@ -217,48 +208,46 @@ function shrink(element, min, trans, percent) {
     }
 }
 
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-      var elements = document.getElementsByClassName("progress-bar"),
-          attribute = [],
-          maxwidth = [],
-          transitions = [],
-          percentages = [],
-          i = 0;
-      var element, max, str, transition, percentage;
-      for (var i = 0; i < elements.length; i++) {
-          element = elements[i];
-          if (element.getAttribute("data-showanimation") !== "false"){
-              if (element.getAttribute("data-progress") === "timer" && (element.getAttribute("data-time") !== "" && element.getAttribute("data-progress") != null)) {
-                  element.classList.add("timer");
-                  element.style.width = "100%"
-                  var label = element.getAttribute("show-label");
-                  label = label === "" || label == null ? "false":document.getElementById(label);
-                  var btnattr = element.getAttribute("toggle-btn")
-                  var btn = btnattr === "" || btnattr == null ? "false":document.getElementById(btnattr);
-                  if (btn != "false") {
+window.addEventListener('load', function() {
+    var elements = document.getElementsByClassName("progress-bar"),
+        attribute = [],
+        maxwidth = [],
+        transitions = [],
+        percentages = [],
+        i = 0;
+    var element, max, str, transition, percentage;
+    for (var i = 0; i < elements.length; i++) {
+        element = elements[i];
+        if (element.getAttribute("data-showanimation") !== "false"){
+            if (element.getAttribute("data-progress") === "timer" && (element.getAttribute("data-time") !== "" && element.getAttribute("data-progress") != null)) {
+                element.classList.add("timer");
+                element.style.width = "100%"
+                var label = element.getAttribute("show-label");
+                label = label === "" || label == null ? "false":document.getElementById(label);
+                var btnattr = element.getAttribute("toggle-btn")
+                var btn = btnattr === "" || btnattr == null ? "false":document.getElementById(btnattr);
+                if (btn != "false") {
                     btn.classList.add("fa");
                     btn.classList.add("fa-play");
                     btn.innerHTML = "";
                     btn.onclick = function(){movetime(btn, element, element.getAttribute("data-time"), label)};
-                  }
-                  else {
+                }
+                else {
                     movetime(null, element, element.getAttribute("data-time"), label)
-                  }
-                  var resetbtnattr = element.getAttribute("reset-btn")
-                  var resetbtn = resetbtnattr === "" || resetbtnattr == null ? "false":document.getElementById(resetbtnattr);
-                  if (resetbtn != "false") {
+                }
+                var resetbtnattr = element.getAttribute("reset-btn")
+                var resetbtn = resetbtnattr === "" || resetbtnattr == null ? "false":document.getElementById(resetbtnattr);
+                if (resetbtn != "false") {
                     resetbtn.classList.add("fa");
                     resetbtn.classList.add("fa-rotate-left");
                     resetbtn.innerHTML = "";
                     resetbtn.onclick = function(){reset(element.getAttribute("data-time"), element, label);};
-                  }
-              }
-          }
-      }
-  }, false);
-})();
+                }
+            }
+        }
+    }
+});
+
 
 function setminl(num) {
     var snum = num.toString();
@@ -344,3 +333,16 @@ function myFunction() {
       elements[i].style.width = scrolled + "%";
   }
 }
+
+window.addEventListener('load', function(){
+    var elements = document.getElementsByClassName("repeated-html");
+    var iteration = Array.prototype.filter.call(elements, function(elem){
+        var to_repeat = elem.getAttribute("content"),
+            times = parseInt(elem.getAttribute("times"));
+        var inner_html = "";
+        for (var t = 0; t < times; t++){
+            inner_html += to_repeat;
+        }
+        elem.innerHTML = inner_html;
+    });
+});
