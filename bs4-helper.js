@@ -234,7 +234,7 @@ window.addEventListener('load', function() {
                 var resetbtn = resetbtnattr === "" || resetbtnattr == null ? "false":document.getElementById(resetbtnattr);
                 if (resetbtn != "false") {
                     resetbtn.classList.add("fa");
-                    resetbtn.classList.add("fa-undo-alt");
+                    resetbtn.classList.add("fa-rotate-left");
                     resetbtn.innerHTML = "";
                     resetbtn.onclick = function(){reset(element.getAttribute("data-time"), element, label);};
                 }
@@ -349,6 +349,6 @@ window.addEventListener("load", function(){
     btn.setAttribute("data-placement", "bottom");
     btn.setAttribute("data-delay", "250");
     btn.setAttribute("title", "Toggle between dark/light theme")
-    btn.innerHTML = '<span class="fa fa-moon" style="font-size:25px"></span>';
+    btn.innerHTML = '<span class="fa fa-moon-o" style="font-size:25px"></span>';
     btn.onclick = function(){var body = document.body; body.classList.toggle("theme-dark")};
 });
