@@ -16,15 +16,14 @@
         <link rel="stylesheet" href="bs4-helper-colors.css">
         <link rel="stylesheet" href="bs4-helper-rotations.css">
         <script src="bs4-helper.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="50" class="theme-dark">
-        <div class="scroll-container">
+        <div class="scroll-container fixed-bottom">
             <div class="scroll-indicator bg-success"></div>
         </div>
-        <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-light">
+        <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
             <a class="navbar-brand" href="#home">Home</a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a href="#howtouse" class="nav-link">How to use</a></li>
@@ -43,6 +42,8 @@
                     </li>
                 </ul>
             </div>
+            <button id="theme-switch" class="btn btn-light"></button>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation"><span class="navbar-toggler-icon"></span></button>
         </nav>
         <div class="container" id="body">
             <div class="section" id="howtouse">
@@ -51,7 +52,7 @@
                     <footer class="blockquote-footer text-xl text-blue font-weight-bold">By Karthikeya Kaza</footer>
                     <h1 class="text-underline">Download BS4 helper:</h1>
                     <h2>Instructions:</h2>
-                    <a class="link" href="https://github.com/bhogi7589/bs4-helper/archive/refs/heads/main.zip" target="_blank">Click to Download.</a>
+                    <a class="link" href="https://github.com/bhogi7589/bs4-helper/raw/main/BS4%20-%20Helper.zip" target="_blank">Click to Download.</a>
                     <h1 class="text-underline">Using CDN:</h1>
                     <h2>Instructions:</h2>
                     <p>If you don't want to download and host BS4 Helper yourself, you can include it from a CDN (Content Delivery Network).</p><br>
@@ -64,8 +65,8 @@
                     &lt;script src="https://bhogi7589.github.io/bs4-helper/bs4-helper.js"&gt;&lt;/script&gt;<br>
                     </code>
                     <br><br>
-                    <h4>You must also import Font Awesome 4 Icons:</h4>
-                    <code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;</code>
+                    <h4>You must also import Font Awesome 5 Icons:</h4>
+                    <code>&lt;script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"&gt;&lt;/script&gt;</code>
                     <h4>For more colors and background colors, use the colors and background colors style sheets of BS4 Helper:</h4>
                     <code>&lt;link rel="stylesheet" href="https://bhogi7589.github.io/bs4-helper/bs4-helper-colors.css"&gt;<br>&lt;link rel="stylesheet" href="https://bhogi7589.github.io/bs4-helper/bs4-helper-bg-colors.css"&gt;</code>
                     <h4>To enable rotated components, use the rotations stylesheet of BS4 Helper:</h4>
@@ -79,19 +80,19 @@
             <div class="section" id="progress">
                 <h1 class="heading heading-underline heading-medium">BS4 Helper Growing Progress Bars</h1>
                 <h1 class="heading heading-underline">Normal Progress Bar</h1>
-                <div class="progress">
+                <div class="progress pill">
                     <div class="progress-bar bg-success" style="width: 50%"></div>
                 </div>
                 <h1 class="heading heading-underline">Growing Progress Bar</h1>
-                <div class="progress">
+                <div class="progress pill">
                     <div class="progress-bar bg-success" data-progress="grow" data-transition=10 data-max-width=95 show-percentage="true"></div>
                 </div>
                 <h1 class="heading heading-underline">Shrinking Progress Bar</h1>
-                <div class="progress">
+                <div class="progress pill">
                     <div class="progress-bar bg-success" data-progress="shrink" data-transition=10 data-min-width=25 show-percentage="true"></div>
                 </div>
                 <h1 class="heading heading-underline">Timer Bar</h1>
-                <div class="progress">
+                <div class="progress pill">
                     <div class="progress-bar bg-success" data-progress="timer" data-time=120 toggle-btn="mybtn" reset-btn="myresetbtn" show-label="myp"></div>
                 </div>
                 <div class="row">

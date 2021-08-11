@@ -30,19 +30,20 @@ body {text-align: center; justify-content: center; margin: auto}
 .section {margin: 6.25rem 0rem!important; border-radius: 0.3125rem!important; padding: 3rem 0.625rem!important}
 
 /*Navbar*/         
-.navbar-brand {font-weight: 900!important; font-size: 2.1875rem!important} .navbar {width: 100vw!important; font-weight: 700; transition: opacity 0.4s; opacity: 0.85; font-size: 1.5625rem!important; box-shadow: 0 0 0.125rem .125rem #777!important} .nav-item, .navbar-brand {transition: transform 0.4s; opacity: 1; padding-left: 1.25rem!important; padding-right: 1.25rem!important} .navbar-brand:hover {transform: scale(1.15)} .nav-item:hover {transform: scale(1.15)} .navbar:hover {opacity: 1} .navbar-toggler {font-size: 1.875rem!important; box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important; outline: none!important; margin-left: 1.25rem!important; margin-right: 1.25rem!important}
+.navbar-brand {font-weight: 900!important; font-size: 2.1875rem!important} .navbar {width: 100%!important; font-weight: 700; transition: opacity 0.4s; opacity: 0.85; font-size: 1.5625rem!important; box-shadow: 0 0 0.125rem .125rem #777!important} .nav-item, .navbar-brand {transition: transform 0.4s; opacity: 1; padding-left: 1.25rem!important; padding-right: 1.25rem!important} .navbar-brand:hover {transform: scale(1.15)} .nav-item:hover {transform: scale(1.15)} .navbar:hover {opacity: 1} .navbar-toggler {font-size: 1.875rem!important; box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important; outline: none!important; margin-left: 1.25rem!important; margin-right: 1.25rem!important}
 
 /*Round Elements*/
-.pill {border-radius:10rem!important}
+.pill {border-radius:10rem!important} .circle {border-radius: 50%!important}
 
 /*Progress Bars*/
-.progress-bar {border-radius: 10rem!important; -webkit-transition: none !important; transition: none !important} .progress {border-radius: 10rem!important}
+.progress-bar {-webkit-transition: none !important; transition: none !important; border-radius: inherit!important}
 
 /*Backgrounds*/
 .bg-rainbow {background: radial-gradient(circle, rgba(128,0,128,1) 0%, rgba(75,0,130,1) 17%, rgba(0,0,255,1) 34%, rgba(0,255,0,1) 51%, rgba(255,255,0,1) 68%, rgba(255,127,0,1) 85%, rgba(255,0,0,1) 100%)!important; background: -webkit-radial-gradient(circle, rgba(128,0,128,1) 0%, rgba(75,0,130,1) 17%, rgba(0,0,255,1) 34%, rgba(0,255,0,1) 51%, rgba(255,255,0,1) 68%, rgba(255,127,0,1) 85%, rgba(255,0,0,1) 100%)!important; background: -moz-radial-gradient(circle, rgba(128,0,128,1) 0%, rgba(75,0,130,1) 17%, rgba(0,0,255,1) 34%, rgba(0,255,0,1) 51%, rgba(255,255,0,1) 68%, rgba(255,127,0,1) 85%, rgba(255,0,0,1) 100%)!important} .bg-muted {background-color: #6c757d!important} .bg-body {background-color: inherit!important} .bg-red {background-color: #f00!important} .bg-orange {background-color: #f70!important} .bg-yellow {background-color: #ff0!important} .bg-green {background-color: #0f0!important} .bg-cyan {background-color: #0ff!important} .bg-blue {background-color: #00f!important} .bg-indigo {background-color: #4b0082!important} .bg-violet {background-color: #800080!important}
 
 /*Themes*/
 .theme-red {background-color: #f00!important; color: #fff!important} .theme-orange {background-color: #ff7f00!important; color: #fff!important} .theme-yellow {background-color: #ff0!important; color: #fff!important} .theme-green {background-color: #0f0!important; color: #fff!important} .theme-cyan {background-color: #0ff!important; color: #fff!important} .theme-blue {background-color: #00f!important; color: #fff!important} .theme-indigo {background-color: #4b0082!important; color: #fff!important} .theme-purple {background-color: #800080!important; color: #fff!important} .theme-primary {background-color: #007bff!important; color: #fff!important} .theme-muted {background-color: #6c757d!important; color: #fff!important} .theme-success {background-color: #28a745!important; color: #fff!important} .theme-info {background-color: #17a2b8!important; color: #fff!important} .theme-warning {background-color: #ffc107!important; color: #fff!important} .theme-danger {background-color:#dc3545!important; color: #fff!important} .theme-secondary {background-color: #494f54!important; color: #fff!important} .theme-white {background-color: #fff!important; color: #000!important} .theme-dark {background-color: #000!important; color: #fff!important} .theme-body {background-color: inherit!important; color: inherit!important} .theme-light {background-color: #fff!important; color: #000!important} .theme-dark kbd {background-color: #eee!important; color: #000!important}
+.theme-red-dark {background-color: #f00!important; color: #000!important} .theme-orange-dark {background-color: #ff7f00!important; color: #000!important} .theme-yellow-dark {background-color: #ff0!important; color: #000!important} .theme-green-dark {background-color: #0f0!important; color: #000!important} .theme-cyan-dark {background-color: #0ff!important; color: #000!important} .theme-dark canvas {background-color: #fff!important}
 
 /*Active or Disabled state*/
 .disabled {pointer-events: none!important}
@@ -54,7 +55,7 @@ body {text-align: center; justify-content: center; margin: auto}
 .timer-label {padding: .3125rem 1.875rem} .timer-btn {margin: .3125rem 1.875rem;} .timer {transition: opacity 0.2s!important; -webkit-transition: opacity 0.4s!important} .timer-disabled {opacity: 0.75!important}
 
 /*Scroll Indicator*/
-.scroll-container {width: 100vw!important; height: .78125rem!important; background-color: #fff!important; display: block!important; position: fixed!important; bottom: 0!important; z-index: 9999999!important} .scroll-indicator {height: 100%!important; width: 0%}
+.scroll-container {width: 100%!important; height: .78125rem!important; background-color: #fff!important; display: block!important; z-index: 9999999!important} .scroll-indicator {height: 100%!important; width: 0%}
 
 /*Containers*/
 .container, .container-fluid {margin-bottom: 1.25rem!important; padding-top: 1.25rem!important; border-radius: 0.3125rem!important; padding-bottom: 1.25rem!important; height: 100%!important; background-color: #ddd!important} .theme-dark .container, .theme-dark .container-fluid {background-color: #222!important}
@@ -62,5 +63,7 @@ body {text-align: center; justify-content: center; margin: auto}
 /*HTML Elements*/
 ul.list {font-size: 0.75em!important} ul.list ul.list {font-size: 0.75em!important} .jumbotron {color: #000!important}
 
+#theme-switch {height: 50px!important; width: 50px!important}
+
 /*Modals*/
-.modal-content {box-shadow: 0 0 5px 3px #000; border: 2px solid #000!important} .theme-dark .modal-content {box-shadow: 0 0 5px 3px #fff!important; color: #fff!important; background-color: #000!important; border: 2px solid #fff!important} .theme-dark .close {color: #fff!important}
+.modal-content {box-shadow: 0 0 5px 3px #000; border: 2px solid #000!important} .theme-dark .modal-content {box-shadow: 0 0 5px 3px #fff!important; color: #fff!important; background-color: #000!important; border: 2px solid #fff!important} .theme-dark .close {color: #fff!important} 

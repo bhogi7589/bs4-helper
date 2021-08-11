@@ -209,13 +209,8 @@ function shrink(element, min, trans, percent) {
 }
 
 window.addEventListener('load', function() {
-    var elements = document.getElementsByClassName("progress-bar"),
-        attribute = [],
-        maxwidth = [],
-        transitions = [],
-        percentages = [],
-        i = 0;
-    var element, max, str, transition, percentage;
+    var elements = document.getElementsByClassName("progress-bar");
+    var element;
     for (var i = 0; i < elements.length; i++) {
         element = elements[i];
         if (element.getAttribute("data-showanimation") !== "false"){
@@ -239,7 +234,7 @@ window.addEventListener('load', function() {
                 var resetbtn = resetbtnattr === "" || resetbtnattr == null ? "false":document.getElementById(resetbtnattr);
                 if (resetbtn != "false") {
                     resetbtn.classList.add("fa");
-                    resetbtn.classList.add("fa-rotate-left");
+                    resetbtn.classList.add("fa-undo-alt");
                     resetbtn.innerHTML = "";
                     resetbtn.onclick = function(){reset(element.getAttribute("data-time"), element, label);};
                 }
@@ -329,9 +324,9 @@ function myFunction() {
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   var elements = document.getElementsByClassName("scroll-indicator");
-  for (var i = 0; i < elements.length; i++) {
-      elements[i].style.width = scrolled + "%";
-  }
+  var iter = Array.prototype.filter.call(elements, function(element){
+      element.style.width = scrolled + "%";
+  });
 }
 
 window.addEventListener('load', function(){
@@ -345,4 +340,15 @@ window.addEventListener('load', function(){
         }
         elem.innerHTML = inner_html;
     });
+});
+
+window.addEventListener("load", function(){
+    var btn = document.getElementById("theme-switch");
+    btn.classList.add("circle");
+    btn.setAttribute("data-toggle", "tooltip");
+    btn.setAttribute("data-placement", "bottom");
+    btn.setAttribute("data-delay", "250");
+    btn.setAttribute("title", "Toggle between dark/light theme")
+    btn.innerHTML = '<span class="fa fa-moon" style="font-size:25px"></span>';
+    btn.onclick = function(){var body = document.body; body.classList.toggle("theme-dark")};
 });
