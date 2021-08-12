@@ -65,5 +65,7 @@ ul.list {font-size: 0.75em!important} ul.list ul.list {font-size: 0.75em!importa
 
 #theme-switch {height: 50px!important; width: 50px!important}
 
+.fixed-left {position: fixed!important; left: 0!important} .fixed-right {position: fixed!important; right: 0!important} .fixed-top-left {position: fixed!important; top: 0!important; left: 0!important} .fixed-bottom-left {position: fixed!important; bottom: 0!important; left: 0!important} .fixed-top-right {position: fixed!important; top: 0!important; right: 0!important} .fixed-bottom-right {position: fixed!important; bottom: 0!important; right: 0!important}
+
 /*Modals*/
 .modal-content {box-shadow: 0 0 5px 3px #000; border: 2px solid #000!important} .theme-dark .modal-content {box-shadow: 0 0 5px 3px #fff!important; color: #fff!important; background-color: #000!important; border: 2px solid #fff!important} .theme-dark .close {color: #fff!important} 
