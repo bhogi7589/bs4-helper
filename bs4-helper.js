@@ -352,3 +352,39 @@ window.addEventListener("load", function(){
     btn.innerHTML = '<span class="fa fa-moon-o" style="font-size:25px"></span>';
     btn.onclick = function(){var body = document.body; body.classList.toggle("theme-dark")};
 });
+
+window.addEventListener("load", function(){
+    var elements = document.getElementsByClassName("location-sensor");
+    if (elements.length != 0){
+    }
+    var iter = Array.prototype.filter.call(elements, function(elem){
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(pos){
+                var lat = pos.coords.latitude, long = pos.coords.longitude;                
+                elem.innerHTML = "Latitude: " + lat + "<br>Longitude: " + long;
+                elem.setAttribute("lat", lat);
+                elem.setAttribute("long", long);   
+            }, exception);
+        }
+        else {
+            window.alert("Geolocation is not supported by this browser.");
+        }
+    });
+});
+
+function exception(error){
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            window.alert("Request for geolocation was denied, please allow and refresh the page.");
+            break;
+        case error.POSITION_UNAVAILABLE:
+            window.alert("Location information is unavailable. Please try again.");
+            break;
+        case error.TIMEOUT:
+            window.alert("The request to get user location timed out. Please try again.");
+            break;
+        case error.UNKNOWN_ERROR:
+            window.alert("An unknown error occurred. Please try again.");
+            break;
+    }    
+}
