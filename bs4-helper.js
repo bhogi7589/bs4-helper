@@ -388,3 +388,17 @@ function exception(error){
             break;
     }    
 }
+
+window.addEventListener('load', function(){
+    var elements = document.getElementsByClassName('input-clear');
+    var iter = Array.prototype.filter.call(elements, function(elem){
+        var inp_id = elem.getAttribute('data-clear');
+        if (inp_id != null){
+            var inp = document.getElementById(inp_id);
+            elem.innerHTML = "&times;"
+            elem.onclick = function(){
+                inp.value = "";
+            };
+        }
+    });
+});

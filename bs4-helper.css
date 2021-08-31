@@ -24,10 +24,10 @@ a.link:link {color: blue; text-decoration: none} a.link:visited {color: blue; te
 body {text-align: center; justify-content: center; margin: auto}
 
 /*Buttons*/
-.btn {cursor: pointer!important; box-shadow: 0 0 0.125rem 0.125rem #777!important} .close {box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important} .outline-none:active {outline: none!important}
+.btn {cursor: pointer!important; box-shadow: 0 0 0.125rem 0.125rem #777} .close {box-shadow: none!important} .outline-none:active {outline: none!important} .input-group-prepend .btn, .input-group-append .btn, .no-box-shadow {box-shadow: none!important}
 
 /*Sections*/
-.section {margin: 6.25rem 0rem!important; border-radius: 0.3125rem!important; padding: 3rem 0.625rem!important}
+.section {margin: 6.1rem 0!important; padding: 3rem 0.625rem!important}
 
 /*Navbar*/         
 .navbar-brand {font-weight: 900!important; font-size: 2.1875rem!important} .navbar {width: 100%!important; font-weight: 700; transition: opacity 0.4s; opacity: 0.85; font-size: 1.5625rem!important; box-shadow: 0 0 0.125rem .125rem #777!important} .nav-item, .navbar-brand {transition: transform 0.4s; opacity: 1; padding-left: 1.25rem!important; padding-right: 1.25rem!important} .navbar-brand:hover {transform: scale(1.15)} .nav-item:hover {transform: scale(1.15)} .navbar:hover {opacity: 1} .navbar-toggler {font-size: 1.875rem!important; box-shadow: 0 0 0 rgba(0, 0, 0, 0)!important; outline: none!important; margin-left: 1.25rem!important; margin-right: 1.25rem!important}
@@ -65,7 +65,7 @@ ul.list {font-size: 0.75em!important} ul.list ul.list {font-size: 0.75em!importa
 
 #theme-switch {height: 50px!important; width: 50px!important}
 
-.fixed-left {position: fixed!important; left: 0!important} .fixed-right {position: fixed!important; right: 0!important} .fixed-top-left {position: fixed!important; top: 0!important; left: 0!important} .fixed-bottom-left {position: fixed!important; bottom: 0!important; left: 0!important} .fixed-top-right {position: fixed!important; top: 0!important; right: 0!important} .fixed-bottom-right {position: fixed!important; bottom: 0!important; right: 0!important}
+.fixed-left {position: fixed!important; left: 0!important; z-index: 9999999} .fixed-right {position: fixed!important; right: 0!important; z-index: 9999999} .fixed-top-left {position: fixed!important; top: 0!important; left: 0!important; z-index: 9999999} .fixed-bottom-left {position: fixed!important; bottom: 0!important; left: 0!important; z-index: 9999999} .fixed-top-right {position: fixed!important; top: 0!important; right: 0!important; z-index: 9999999} .fixed-bottom-right {position: fixed!important; bottom: 0!important; right: 0!important; z-index: 9999999}
 
 /*Modals*/
 .modal-content {box-shadow: 0 0 5px 3px #000; border: 2px solid #000!important} .theme-dark .modal-content {box-shadow: 0 0 5px 3px #fff!important; color: #fff!important; background-color: #000!important; border: 2px solid #fff!important} .theme-dark .close {color: #fff!important} 
