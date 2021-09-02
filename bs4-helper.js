@@ -9,10 +9,6 @@ $(document).ready(function(){
   $('[data-toggle="popover"]').popover();
 });
 
-$(document).ready(function(){
-  $('.toast').toast('show');
-});
-
 $(".custom-file-input").on("change", function() {
   var fileName = $(this).val().split("\\").pop();
   $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
@@ -398,6 +394,28 @@ window.addEventListener('load', function(){
             elem.innerHTML = "&times;"
             elem.onclick = function(){
                 inp.value = "";
+            };
+        }
+    });
+});
+
+window.addEventListener('load', function(){
+    var elements = document.getElementsByClassName('password-visibility-control');
+    var iter = Array.prototype.filter.call(elements, function(elem){
+        var inp_id = elem.getAttribute('data-control');
+        if (inp_id != null){
+            var inp = document.getElementById(inp_id);
+            inp.type = "password";
+            elem.innerHTML = '<span class="fa fa-eye"></span>';
+            elem.onclick = function(){
+                if (inp.type == "passsword"){
+                    inp.type = "text";
+                    elem.innerHTML = '<span class="fa fa-low-vision"></span>';
+                }
+                else {
+                    inp.type = "password";
+                    elem.innerHTML = '<span class="fa fa-eye"></span>';
+                }
             };
         }
     });
