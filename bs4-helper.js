@@ -406,15 +406,13 @@ window.addEventListener('load', function(){
         if (inp_id != null){
             var inp = document.getElementById(inp_id);
             inp.type = "password";
-            elem.innerHTML = '<span class="fa fa-eye"></span>';
+            elem.removeAttribute("checked"); 
             elem.onclick = function(){
                 if (inp.type == "passsword"){
                     inp.type = "text";
-                    elem.innerHTML = '<span class="fa fa-low-vision"></span>';
                 }
                 else {
                     inp.type = "password";
-                    elem.innerHTML = '<span class="fa fa-eye"></span>';
                 }
             };
         }
