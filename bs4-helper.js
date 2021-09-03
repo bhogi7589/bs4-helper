@@ -408,12 +408,7 @@ window.addEventListener('load', function(){
             inp.type = "password";
             elem.removeAttribute("checked"); 
             elem.onclick = function(){
-                if (inp.type == "passsword"){
-                    inp.type = "text";
-                }
-                else {
-                    inp.type = "password";
-                }
+                inp.setAttribute("type", inp.type == "password" ? "text":"password");
             };
         }
     });
