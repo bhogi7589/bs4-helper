@@ -412,12 +412,3 @@ window.addEventListener('load', function(){
         }
     });
 });
-
-window.addEventListener('load', function(){
-    var forms = document.getElementsByTagName('form');
-    var iter = Array.prototype.filter.call(forms, function(form){
-        if (form.action == null){
-            form.action = "javascript:void(0);"
-        }
-    });
-});
