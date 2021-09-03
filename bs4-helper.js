@@ -406,9 +406,8 @@ window.addEventListener('load', function(){
         if (inp_id != null){
             var inp = document.getElementById(inp_id);
             inp.type = "password";
-            elem.removeAttribute("checked"); 
             elem.onclick = function(){
-                inp.setAttribute("type", inp.type == "password" ? "text":"password");
+                inp.type = inp.type === "password" ? "text" : "password";
             };
         }
     });
