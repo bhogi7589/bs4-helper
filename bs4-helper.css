@@ -69,3 +69,6 @@ ul.list {font-size: 0.75em!important} ul.list ul.list {font-size: 0.75em!importa
 
 /*Modals*/
 .modal-content {box-shadow: 0 0 5px 3px #000; border: 2px solid #000!important} .theme-dark .modal-content {box-shadow: 0 0 5px 3px #fff!important; color: #fff!important; background-color: #000!important; border: 2px solid #fff!important} .theme-dark .close {color: #fff!important}
+
+/*Accordion*/
+.accordion .fa.toggle-icon {margin-right: 0.5rem!important}
