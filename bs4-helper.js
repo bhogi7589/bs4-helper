@@ -423,3 +423,50 @@ window.addEventListener('load', function(){
         }
     });
 });
+
+
+class Random {
+    constructor(){
+        this.author = "Karthikeya Kaza";
+    }
+    randbelow(x){
+        return Math.floor(Math.random() * Math.ceil(x));
+    }
+    randint(x, y) {
+        let lb = 0;
+        let diff = 0;
+        x = Math.ceil(x);
+        y = Math.ceil(y);
+        if (x < y) {
+            diff = y - x;
+            lb = x;
+        }
+        else {
+            diff = x - y;
+            lb = y;
+        }
+        return this.randbelow(diff + 1) + lb;
+    }
+    choice(arr){
+        return arr[this.randbelow(arr.length)];
+    }
+    choices(arr, n){
+        if (n > arr.length){
+            return;
+        }
+        let ch = [];
+        while (ch.length < n) {
+            let cho = this.choice(arr);
+            if (!arr.includes(cho)){
+                arr.push(cho);
+            }
+        }
+        return ch;
+    }
+}
+
+randobj = new Random();
+randbelow = randobj.randbelow;
+randint = randobj.randint;
+choice = randobj.choice;
+choices = randobj.choices;
