@@ -25,6 +25,12 @@ $(document).ready(function(){
     });
 });
 
+var lower = "qwertyuiopasdfghjklzxcvbnm".split("");
+var upper = "QWERTYUIOPASDFGHJKLZXCVBNM".split("");
+var alpha = lower.concat(upper);
+var numeric = "1234567890".split("");
+var alphanumeric = alpha.concat(numeric);
+
 (function() {
   'use strict';
   window.addEventListener('load', function() {
@@ -442,23 +448,66 @@ function randint(x, y) {
         diff = x - y;
         lb = y;
     }
-    return randbelow(diff + 1) + lb;
+    return randbelow(diff) + lb;
 }
 
 function choice(arr){
     return arr[randbelow(arr.length)];
 }
 
-function choices(arr, n){
-    if (n > arr.length){
-        return;
+function shuffle(arr){
+    var carr = arr, li = arr.length - 1;
+    for (var i = 0; i < arr.length; i++){
+        var rand = randint(i, arr.length);
+        var temp = carr[i];
+        carr[i] = carr[rand];
+        carr[rand] = temp;
     }
-    var ch = [];
-    while (ch.length < n) {
-        var cho = choice(arr);
-        if (!arr.includes(cho)){
-            arr.push(cho);
+    return carr;
+}
+
+window.addEventListener('load', function(){
+    var elements = document.getElementsByClassName("captcha");
+    var iter = Array.prototype.filter.call(elements, function(elem){
+        if (!elem.classList.has("noselect")){
+            elem.classList.add("noselect")
         }
-    }
-    return ch;
+        var proto_time = elem.getAttribute("data-interval");
+        var interval = proto_time == null ? 5 : parseInt(proto_time);
+        var proto_type = elem.getAttribute("data-type");
+        var type = proto_type == null ? "alphanumeric" : proto_type;
+        var proto_charnum = elem.getAttribute("data-charnum");
+        var charnum = proto_charnum == null ? 6 : parseInt(proto_charnum);
+        var arr = null;
+        if (type == "alphanumeric"){
+            arr = alphanumeric;
+        }
+        else if (type == "numeric"){
+            arr = numeric;
+        }
+        else if (type == "alpha"){
+            arr = alpha;
+        }
+        if (arr == null){
+            arr = alphanumeric;
+        }
+        elem.onload = function(){
+            var myvar = setInterval(function(){
+                var rand_let = [];
+                for (var i = 0; i < charnum; i++){
+                    rand_let.push(choice(arr));
+                }
+                elem.innerHTML = rand_let.join("");
+                
+            }, interval);
+        };
+    });
+});
+
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+  var d = new Date();
+  var t = d.toLocaleTimeString();
+  document.getElementById("clock").innerHTML = t;
 }

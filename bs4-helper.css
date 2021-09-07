@@ -72,3 +72,9 @@ ul.list {font-size: 0.75em!important} ul.list ul.list {font-size: 0.75em!importa
 
 /*Accordion*/
 .accordion .fa.toggle-icon {position: absolute} .left {left: 0; margin-left: 1rem} .right {right:0; margin-right: 1rem!important}
+
+/*Unselectable*/
+.noselect {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+
+/*Captcha*/
+.captcha {font-family: monospace!important}
