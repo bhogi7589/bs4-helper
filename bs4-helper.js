@@ -469,7 +469,7 @@ function shuffle(arr){
 window.addEventListener('load', function(){
     var elements = document.getElementsByClassName("captcha");
     var iter = Array.prototype.filter.call(elements, function(elem){
-        if (!elem.classList.has("noselect")){
+        if (!elem.classList.contains("noselect")){
             elem.classList.add("noselect")
         }
         var proto_time = elem.getAttribute("data-interval");
