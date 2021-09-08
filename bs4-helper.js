@@ -491,15 +491,12 @@ window.addEventListener('load', function(){
         if (arr == null){
             arr = alphanumeric;
         }
-        elem.onload = function(){
-            var myvar = setInterval(function(){
-                var rand_let = [];
-                for (var i = 0; i < charnum; i++){
-                    rand_let.push(choice(arr));
-                }
-                elem.innerHTML = rand_let.join("");
-                
-            }, interval);
-        };
+        var myvar = setInterval(function(){
+            var rand_let = [];
+            for (var i = 0; i < charnum; i++){
+                rand_let.push(choice(arr));
+            }
+            elem.innerHTML = rand_let.join("");
+        }, interval);
     });
 });
