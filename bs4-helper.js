@@ -473,7 +473,7 @@ window.addEventListener('load', function(){
             elem.classList.add("noselect")
         }
         var proto_time = elem.getAttribute("data-interval");
-        var interval = proto_time == null ? 5000 : parseInt(proto_time) * 1000;
+        var interval = proto_time == null ? 10000 : parseInt(proto_time) * 1000;
         var proto_type = elem.getAttribute("data-type");
         var type = proto_type == null ? "alphanumeric" : proto_type;
         var proto_charnum = elem.getAttribute("data-charnum");
