@@ -71,7 +71,7 @@ ul.list {font-size: 0.75em!important} ul.list ul.list {font-size: 0.75em!importa
 .modal-content {box-shadow: 0 0 5px 3px #000; border: 2px solid #000!important} .theme-dark .modal-content {box-shadow: 0 0 5px 3px #fff!important; color: #fff!important; background-color: #000!important; border: 2px solid #fff!important} .theme-dark .close {color: #fff!important}
 
 /*Accordion*/
-.accordion .fa.toggle-icon {position: absolute} .left {left: 0; margin-left: 1rem} .right {right:0; margin-right: 1rem!important}
+.accordion .fa.toggle-icon {position: absolute} .left {left: 0; margin-left: 1rem} .right {right:0; margin-right: 1rem!important} .toggle-icon {font-size: 1.25em!important} .accordion-toggle {box-shadow: none!important} .accordion-toggle:not(.collapsed) {background-color: #e7f1ff; color: #0c63e4}
 
 /*Unselectable*/
 .noselect {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
