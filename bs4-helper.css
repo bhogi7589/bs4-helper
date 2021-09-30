@@ -24,7 +24,10 @@ a.link:link {color: blue; text-decoration: none} a.link:visited {color: blue; te
 body {text-align: center; justify-content: center; margin: auto}
 
 /*Buttons*/
-.btn {cursor: pointer!important; box-shadow: 0 0 0.125rem 0.125rem #777} .close {box-shadow: none!important} .outline-none:active {outline: none!important}
+.btn {cursor: pointer!important} .close {box-shadow: none!important} .outline-none:active {outline: none!important}
+
+/*Shadows*/
+.shadow-inset-sm {box-shadow :0 .125rem .25rem rgba(0,0,0,.075) inset!important} .shadow-inset {box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) inset!important} .shadow-inset-lg {box-shadow: 0 1rem 3rem rgba(0,0,0,.175) inset!important}
 
 /*Sections*/
 .section {margin: 6.1rem 0!important; padding: 3rem 0.625rem!important}
