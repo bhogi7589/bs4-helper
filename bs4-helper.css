@@ -27,7 +27,10 @@ body {text-align: center; justify-content: center; margin: auto}
 .btn {cursor: pointer!important} .close {box-shadow: none!important} .outline-none:active {outline: none!important}
 
 /*Shadows*/
-.shadow-inset-sm {box-shadow :0 .125rem .25rem rgba(0,0,0,.075) inset!important} .shadow-inset {box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) inset!important} .shadow-inset-lg {box-shadow: 0 1rem 3rem rgba(0,0,0,.175) inset!important}
+.shadow-sm {box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.16)!important} .shadow {box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.16)!important} .shadow-lg {box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.16)!important} .shadow-inset-sm {box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.16) inset!important} .shadow-inset {box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.16) inset!important} .shadow-inset-lg {box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.16) inset!important}
+
+/*Forms*/
+.form-inner {text-align: left!important; margin: auto!important; width: 95%!important}
 
 /*Sections*/
 .section {margin: 6.1rem 0!important; padding: 3rem 0.625rem!important}
@@ -71,7 +74,7 @@ ul.list {font-size: 0.75em!important} ul.list ul.list {font-size: 0.75em!importa
 .fixed-left {position: fixed!important; left: 0!important; z-index: 9999999} .fixed-right {position: fixed!important; right: 0!important; z-index: 9999999} .fixed-top-left {position: fixed!important; top: 0!important; left: 0!important; z-index: 9999999} .fixed-bottom-left {position: fixed!important; bottom: 0!important; left: 0!important; z-index: 9999999} .fixed-top-right {position: fixed!important; top: 0!important; right: 0!important; z-index: 9999999} .fixed-bottom-right {position: fixed!important; bottom: 0!important; right: 0!important; z-index: 9999999}
 
 /*Modals*/
-.modal-content {box-shadow: 0 0 5px 3px #000; border: 2px solid #000!important} .theme-dark .modal-content {box-shadow: 0 0 5px 3px #fff!important; color: #fff!important; background-color: #000!important; border: 2px solid #fff!important} .theme-dark .close {color: #fff!important}
+.modal-content {box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.16)!important; border: 2px solid #000!important} .theme-dark .modal-content {box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.16)!important; color: #fff!important; background-color: #000!important; border: 2px solid #fff!important} .theme-dark .close {color: #fff!important}
 
 /*Accordion*/
 .accordion .fa.toggle-icon {position: absolute} .left {left: 0; margin-left: 1rem} .right {right:0; margin-right: 1rem!important} .toggle-icon {font-size: 1.25em!important} .accordion-toggle {box-shadow: none!important} .accordion-toggle:not(.collapsed) {background-color: #e7f1ff; color: #0c63e4}
