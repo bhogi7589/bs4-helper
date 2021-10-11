@@ -84,3 +84,6 @@ ul.list {font-size: 0.75em!important} ul.list ul.list {font-size: 0.75em!importa
 
 /*Captcha*/
 .captcha {font-family: monospace!important}
+
+/*Text Editor*/
+.text-editor {overflow: auto; min-height: 8.625rem}

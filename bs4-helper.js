@@ -500,3 +500,60 @@ window.addEventListener('load', function(){
         }, interval);
     });
 });
+
+window.addEventListener('load', function(){
+    var elements = document.getElementsByClassName("text-editor");
+    var iter = Array.prototype.filter.call(elements, function(elem){
+    	if (!elem.classList.contains("form-control")){
+            elem.classList.add("form-control");
+        }
+        elem.setAttribute("contenteditable", "true");
+        var container = document.createElement('div');
+        container.classList.add("btn-group");
+        container.classList.add("w-100");
+        container.innerHTML=''+
+            '<button class="btn btn-secondary" data-toggle="button" aria-pressed="false" data-tag="bold"><span class="fa fa-bold"></span></button>'+
+            '<button class="btn btn-secondary" data-toggle="button" aria-pressed="false" data-tag="italic"><span class="fa fa-italic"></span></button>'+
+            '<button class="btn btn-secondary" data-toggle="button" aria-pressed="false" data-tag="underline"><span class="fa fa-underline"></span></button>'+
+            '<button class="btn btn-secondary" data-toggle="button" aria-pressed="false" data-tag="strikeThrough"><span class="fa fa-strikethrough"></span></button>'+
+            '<button class="btn btn-secondary" data-tag="insertUnorderedList">• Unordered List</button>'+
+            '<button class="btn btn-secondary" data-tag="insertOrderedList">1. Ordered List</button>'+
+            '<button class="btn btn-secondary" data-tag="createLink"><span class="fa fa-link"></span></button>'+
+            '<button class="btn btn-secondary" data-tag="insertImage"><span class="fa fa-picture-o"></span></button>'+
+            '<button class="btn btn-secondary" data-tag="removeFormat">Remove format</button>';
+        addChildAfter(elem, container);
+        var buttons = container.querySelectorAll('button[data-tag]');
+        for (var i = 0; i < buttons.length; i++){
+            buttons[i].addEventListener('click', function(e){
+            	var tag = this.getAttribute('data-tag');
+                switch(tag){
+                    case 'createLink':
+                    	var link = prompt('Please specify the link:');
+                        if (link){
+                            document.execCommand(tag, false, link);
+                        }
+                    	break;
+                    case 'insertImage':
+                    	var src = prompt('Please specify the link of the image:');
+                        if (src){
+                            document.execCommand(tag, false, src);
+                        }
+                        break;
+                    default:
+                    	document.execCommand(tag, false, this.getAttribute('data-value'));
+                }
+                e.preventDefault();
+            });
+        }
+    });
+});
+
+function addChildAfter(elem, child){
+    var parent = elem.parentNode;
+    if (parent.lastChild == elem){
+    	parent.appendChild(child);
+    }
+    else {
+    	parent.insertBefore(child, elem.nextSibling);
+    }
+}
