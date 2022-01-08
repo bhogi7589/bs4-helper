@@ -557,3 +557,11 @@ function addChildAfter(elem, child){
     	parent.insertBefore(child, elem.nextSibling);
     }
 }
+
+window.addEventListener('load', function(){
+    var elements = document.getElementsByClassName("theme-custom");
+    var iter = Array.prototype.filter.call(elements, function(elem){
+        var color = elem.getAttribute("bgcolor");
+        elem.style.backgroundColor = color;
+    });
+});
