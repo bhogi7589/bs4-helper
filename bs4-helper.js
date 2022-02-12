@@ -571,9 +571,6 @@ window.addEventListener('load', function(){
     var iter = Array.prototype.filter.call(elements, function(elem){
         elem.innerHTML = '<span class="fa fa-clone"></span> Copy';
         var copytext = document.getElementById(elem.getAttribute("copy")).innerHTML.toString();
-        for (var i = 0; i < 3; i++){
-            copytext.replace(codes[i], symbols[i]);
-        }
         elem.addEventListener('click', function(){
             navigator.clipboard.writeText(copytext);
             window.alert("Sucessfully copied to clipboard!");
